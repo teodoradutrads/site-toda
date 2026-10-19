@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TÓDA Educação | Conteúdo sobre operação comercial</title>
+<meta name="description" content="Materiais para estudar, treinar times e estruturar processos comerciais: WhatsApp, marketing, vendas e automação.">
+<link rel="canonical" href="https://todaeco.com/educacao/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TÓDA Educação | Conteúdo sobre operação comercial">
+<meta property="og:description" content="Materiais para estudar, treinar times e estruturar processos comerciais: WhatsApp, marketing, vendas e automação.">
+<meta property="og:url" content="https://todaeco.com/educacao/">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E2318'/%3E%3Cg stroke='%23C3F53C' stroke-width='5' stroke-linecap='round'%3E%3Cline x1='12' y1='46' x2='30' y2='22'/%3E%3Cline x1='30' y1='22' x2='51' y2='33'/%3E%3C/g%3E%3Cg fill='%23C3F53C'%3E%3Ccircle cx='12' cy='46' r='6'/%3E%3Ccircle cx='30' cy='22' r='6'/%3E%3Ccircle cx='51' cy='33' r='6'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --forest:#0E2318;
+    --forest-light:#3b4f47;
+    --cream:#EEEBDC;
+    --ink:#0E2318;
+    --lime:#C3F53C;
+    --lilac:#dadafc;
+    --lilac-deep:#bdc0dc;
+    --line-cream:rgba(14,35,24,0.14);
+    --line-dark:rgba(238,235,220,0.18);
+    --muted-cream:rgba(14,35,24,0.64);
+    --muted-dark:rgba(238,235,220,0.7);
+    --pad-x:clamp(1.25rem,4vw,3.5rem);
+    --measure:36rem;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{background:var(--cream);color:var(--ink);}
+  img{max-width:100%;}
+
+  .toda{
+    font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .toda h1,.toda h2,.toda h3,.toda h4,.toda .disp{
+    font-family:'Sora', -apple-system, sans-serif;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    text-wrap:balance;
+    margin:0;
+  }
+  p{ margin:0; }
+  [hidden]{ display:none !important; }
+
+  /* ---------- structure ---------- */
+  .band{ padding:clamp(4.2rem,9vw,7rem) var(--pad-x); position:relative; overflow:hidden; }
+  .band-dark{ background:var(--forest); color:var(--cream); }
+  .band-cream{ background:var(--cream); color:var(--ink); }
+  .wrap{ max-width:1440px; margin:0 auto; position:relative; z-index:2; }
+  .prose{ max-width:var(--measure); }
+  .lede{ font-size:clamp(1.03rem,1.5vw,1.16rem); line-height:1.62; color:var(--muted-cream); }
+  .band-dark .lede{ color:var(--muted-dark); }
+
+  .kicker{
+    display:flex; align-items:center; gap:0.6em;
+    font-weight:700; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--forest-light); margin:0 0 1rem;
+  }
+  .band-dark .kicker{ color:var(--lime); }
+  .kicker::before{ content:""; width:20px; height:2px; background:currentColor; display:block; flex:none; }
+
+  h2.headline{ font-size:clamp(1.9rem,4vw,2.9rem); line-height:1.1; }
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky; top:0; z-index:40;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    padding:1.1rem var(--pad-x);
+    background:rgba(14,35,24,0.95);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .brand{ display:flex; align-items:center; gap:0.6rem; color:var(--cream); text-decoration:none; flex:none; }
+  .brand svg{ width:31px; height:21px; display:block; }
+  .brand-word{ font-family:'Sora',sans-serif; font-size:1.4rem; letter-spacing:-0.02em; font-weight:800; text-transform:lowercase; line-height:1; }
+  .top-tabs{ display:flex; align-items:center; gap:0.3rem; }
+  .tab-btn{
+    font-family:'Manrope',sans-serif;
+    font-weight:700; font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase;
+    padding:0.5rem 0.95rem; border-radius:100px; border:none; background:transparent;
+    color:var(--muted-dark); cursor:pointer; transition:background .18s ease, color .18s ease;
+  }
+  .tab-btn:hover{ color:var(--cream); }
+  .tab-btn[aria-current="page"]{ background:var(--lime); color:var(--forest); }
+  @media (max-width:640px){ .top-tabs{ display:none; } }
+  .header-cta{
+    display:inline-flex; align-items:center; gap:0.5em;
+    font-weight:700; font-size:0.8rem; color:var(--forest); text-decoration:none;
+    background:var(--lime); padding:0.55rem 1.1rem; border-radius:100px;
+    transition:transform .18s ease; flex:none;
+  }
+  .header-cta:hover{ transform:translateY(-1px); }
+  @media (max-width:600px){ .header-cta span.long{ display:none; } }
+
+  .mark{ color:inherit; }
+  .mark-line{ stroke-linecap:round; }
+
+  /* ---------- buttons ---------- */
+  .btn-lime{
+    display:inline-flex; align-items:center; gap:0.6em;
+    font-weight:700; font-size:0.94rem;
+    color:var(--forest); background:var(--lime);
+    text-decoration:none; padding:1rem 1.8rem; border-radius:100px;
+    transition:transform .18s ease, box-shadow .18s ease; border:none; cursor:pointer;
+    font-family:'Manrope',sans-serif;
+  }
+  .btn-lime:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,0.18); }
+  .btn-lime .arrow{ transition:transform .18s ease; }
+  .btn-lime:hover .arrow{ transform:translateX(3px); }
+
+  .btn-outline{
+    display:inline-flex; align-items:center; gap:0.6em;
+    font-weight:700; font-size:0.94rem;
+    text-decoration:none; color:inherit;
+    border:1.5px solid currentColor; padding:0.92rem 1.7rem; border-radius:100px;
+    transition:background .18s ease, color .18s ease; background:none; cursor:pointer;
+    font-family:'Manrope',sans-serif;
+  }
+  .band-cream .btn-outline:hover{ background:var(--ink); color:var(--cream); }
+  .band-dark .btn-outline:hover{ background:var(--cream); color:var(--forest); }
+  .btn-outline .arrow{ transition:transform .18s ease; }
+  .btn-outline:hover .arrow{ transform:translateX(3px); }
+
+  /* ---------- chips ---------- */
+  .chip{
+    display:inline-flex; align-items:center; gap:0.5em;
+    font-weight:700; font-size:0.82rem;
+    padding:0.55rem 1rem; border-radius:100px;
+    border:1px solid var(--line-cream); color:var(--ink); text-decoration:none;
+    background:none;
+  }
+  .band-dark .chip{ border-color:var(--line-dark); color:var(--cream); }
+  .chip .dot{ width:6px; height:6px; border-radius:50%; background:var(--forest-light); flex:none; }
+  .band-dark .chip .dot{ background:var(--lime); }
+  .chip.on{ background:var(--lime); border-color:var(--lime); color:var(--forest); }
+  .chip.off{ color:var(--muted-cream); text-decoration:line-through; }
+  a.chip:hover{ border-color:var(--ink); }
+  .band-dark a.chip:hover{ border-color:var(--cream); }
+
+  /* ---------- hero ---------- */
+  .hero{ padding-top:clamp(5.5rem,11vw,8rem); }
+  .hero-bars{
+    position:absolute; right:clamp(1rem,4vw,4rem); bottom:0;
+    display:flex; align-items:flex-end; gap:clamp(8px,1.4vw,16px);
+    height:clamp(140px,26vw,320px); z-index:0; opacity:0.9;
+    pointer-events:none;
+  }
+  .hero-bars i{ display:block; width:clamp(14px,2.2vw,26px); border-radius:6px 6px 0 0; }
+  .hero-bars i:nth-child(1){ height:34%; background:rgba(238,235,220,0.14); }
+  .hero-bars i:nth-child(2){ height:54%; background:rgba(238,235,220,0.2); }
+  .hero-bars i:nth-child(3){ height:74%; background:var(--lilac); opacity:0.9; }
+  .hero-bars i:nth-child(4){ height:92%; background:var(--lime); }
+  .hero-bars i:nth-child(5){ height:66%; background:rgba(238,235,220,0.2); }
+  .hero-grid{ display:flex; flex-wrap:wrap; gap:2rem 3rem; align-items:flex-end; }
+  .hero-copy{ min-width:0; max-width:38rem; }
+  .hero-mark{ width:72px; height:50px; margin-bottom:1.6rem; }
+  .hero-headline{ font-size:clamp(2.5rem,6.6vw,4.6rem); line-height:1.05; }
+  .hero-headline .accent{ color:var(--lime); }
+  .hero-lede{ margin-top:1.5rem; max-width:30rem; }
+  .hero-actions{ margin-top:2rem; }
+  .chiprow{ margin-top:2.6rem; display:flex; flex-wrap:wrap; gap:0.7rem; position:relative; z-index:2; }
+
+  /* ---------- problem / funnel ---------- */
+  .problem-grid{ margin-top:2.6rem; display:grid; grid-template-columns:220px 1fr; gap:2.6rem 3rem; align-items:center; }
+  @media (max-width:760px){ .problem-grid{ grid-template-columns:1fr; } }
+  .funnel-svg{ width:100%; max-width:220px; height:auto; display:block; }
+  .funnel-list{ display:flex; flex-direction:column; }
+  .funnel-list > div{ display:flex; gap:1rem; padding:1.05rem 0; border-top:1px solid var(--line-cream); align-items:baseline; }
+  .funnel-list > div:last-child{ border-bottom:1px solid var(--line-cream); }
+  .funnel-list .n{ font-family:'Sora',sans-serif; font-weight:800; font-size:0.85rem; color:var(--forest-light); flex:none; }
+  .funnel-list p{ font-size:clamp(1rem,1.3vw,1.1rem); }
+  .problem-foot{ margin-top:2.2rem; }
+  .problem-actions{ margin-top:2rem; }
+
+  /* ---------- missão ---------- */
+  .mission-lines{ display:flex; flex-direction:column; gap:0.25em; }
+  .mission-line p{
+    font-family:'Sora',sans-serif; font-weight:700;
+    font-size:clamp(1.5rem,4.4vw,2.9rem); line-height:1.16;
+  }
+  .mission-line em{ font-style:normal; font-weight:800; color:var(--lime); }
+  .mission-line.alt em{ color:var(--lilac); }
+  .mission-close{ margin-top:2.2rem; font-weight:700; font-size:1.05rem; color:var(--cream); }
+
+  /* ---------- serviços / cards genéricos ---------- */
+  .service-grid{ margin-top:2.8rem; display:grid; grid-template-columns:repeat(2,1fr); gap:1.1rem; }
+  .service-grid.cols-3{ grid-template-columns:repeat(3,1fr); }
+  @media (max-width:820px){ .service-grid.cols-3{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:700px){ .service-grid,.service-grid.cols-3{ grid-template-columns:1fr; } }
+  .service{
+    background:#fff; border:1px solid var(--line-cream); border-radius:18px;
+    padding:1.8rem; display:flex; flex-direction:column; gap:0.9rem;
+    transition:transform .22s ease, box-shadow .22s ease;
+  }
+  .service:hover{ transform:translateY(-4px); box-shadow:0 16px 32px rgba(14,35,24,0.1); }
+  .service-icon{
+    width:44px; height:44px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center; flex:none;
+    font-family:'Sora',sans-serif; font-weight:800; font-size:1.05rem;
+  }
+  .service:nth-child(odd) .service-icon{ background:var(--forest); color:var(--lime); }
+  .service:nth-child(even) .service-icon{ background:var(--lilac); color:var(--forest); }
+  .service-icon svg{ width:22px; height:22px; }
+  .service h3{ font-size:1.12rem; font-weight:800; }
+  .service p{ font-size:0.94rem; color:var(--muted-cream); }
+  .service p.desc{ font-size:0.94rem; color:var(--muted-cream); }
+  .service .tag{ font-weight:700; font-size:0.66rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--forest-light); }
+  .service ul{ margin:0.2rem 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:0.4rem; }
+  .service li{ font-size:0.86rem; color:var(--muted-cream); padding-left:1rem; position:relative; }
+  .service li::before{ content:"·"; position:absolute; left:0; font-weight:800; color:var(--forest-light); }
+  .service:nth-child(5){ grid-column:1 / -1; }
+  @media (max-width:700px){ .service:nth-child(5){ grid-column:auto; } }
+  .svc-actions{ margin-top:2.2rem; }
+
+  /* edu hub cards */
+  .edu-card{ text-decoration:none; color:inherit; cursor:pointer; position:relative; }
+  .edu-card .go-arrow{ align-self:flex-end; font-size:1.3rem; color:var(--forest-light); transition:transform .18s ease; margin-top:auto; }
+  .edu-card:hover .go-arrow{ transform:translateX(4px); }
+
+  /* ---------- como trabalhamos: flow ---------- */
+  .flow{ margin-top:2.8rem; display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative; }
+  .flow.cols-3{ grid-template-columns:repeat(3,1fr); }
+  @media (max-width:820px){ .flow,.flow.cols-3{ grid-template-columns:1fr; gap:1.6rem; } }
+  .flow-node{ position:relative; padding:0 1.2rem 0 0; }
+  @media (max-width:820px){ .flow-node{ padding:0; } }
+  .flow-node:not(:last-child)::after{
+    content:""; position:absolute; top:26px; right:-4px; width:calc(100% - 22px);
+    border-top:2px dashed var(--line-dark);
+  }
+  .band-cream .flow-node:not(:last-child)::after{ border-top-color:var(--line-cream); }
+  @media (max-width:820px){ .flow-node:not(:last-child)::after{ display:none; } }
+  .flow-icon{
+    width:52px; height:52px; border-radius:50%;
+    background:var(--lime); color:var(--forest);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Sora',sans-serif; font-weight:800; font-size:1.15rem;
+    position:relative; z-index:2;
+  }
+  .flow-node:nth-child(even) .flow-icon{ background:var(--lilac); }
+  .flow-node h3,.flow-node h4{ margin-top:1.1rem; font-size:1.12rem; font-weight:800; }
+  .flow-node p{ margin-top:0.5rem; font-size:0.92rem; color:var(--muted-dark); max-width:16rem; }
+  .band-cream .flow-node p{ color:var(--muted-cream); }
+
+  /* ---------- diagnóstico / checklist ---------- */
+  .checklist{ margin-top:2.6rem; display:grid; grid-template-columns:repeat(2,1fr); gap:0 2.8rem; }
+  @media (max-width:760px){ .checklist{ grid-template-columns:1fr; } }
+  .check-row{ display:flex; gap:0.9rem; align-items:flex-start; padding:0.9rem 0; border-top:1px solid var(--line-cream); }
+  .checklist > .check-row:nth-last-child(-n+2){ border-bottom:1px solid var(--line-cream); }
+  .check-row svg{ flex:none; width:20px; height:20px; color:var(--forest-light); margin-top:0.1em; }
+  .check-row p{ font-size:1.02rem; font-weight:500; }
+  .diag-foot{ margin-top:2.2rem; }
+  .diag-actions{ margin-top:2rem; }
+
+  /* ---------- ia ---------- */
+  .chain{ margin-top:1.6rem; display:flex; flex-wrap:wrap; align-items:center; gap:0.6rem; }
+  .chain span{ font-weight:700; font-size:0.86rem; padding:0.5rem 0.95rem; border-radius:100px; border:1px solid var(--lilac-deep); color:var(--cream); }
+  .chain span.on{ background:var(--lime); color:var(--forest); border-color:var(--lime); }
+  .chain .sep{ color:var(--muted-dark); border:none; padding:0; }
+  .pull{
+    margin-top:2rem; padding:1.6rem 1.8rem;
+    background:rgba(238,235,220,0.06); border-left:3px solid var(--lime); border-radius:0 14px 14px 0;
+    font-family:'Sora',sans-serif; font-weight:700;
+    font-size:clamp(1.1rem,2.1vw,1.35rem); line-height:1.35;
+  }
+  .band-cream .pull{ background:rgba(14,35,24,0.04); }
+  .ia-actions{ margin-top:2.2rem; }
+
+  /* ---------- para quem ---------- */
+  .chipgrid{ margin-top:2.6rem; display:flex; flex-wrap:wrap; gap:0.8rem; }
+
+  /* ---------- diferencial ---------- */
+  .flow-diagram-wrap{ margin-top:2.8rem; overflow-x:auto; padding-bottom:0.6rem; }
+  .flow-diagram{ display:block; width:1180px; max-width:none; height:auto; }
+  .node-rect{ fill:var(--forest-light); stroke:var(--line-dark); stroke-width:1.4; }
+  .node-rect-hub{ fill:var(--lime); stroke:var(--lime); }
+  .node-text{ font-family:'Sora',sans-serif; font-weight:700; font-size:15px; letter-spacing:0.01em; fill:var(--cream); }
+  .node-text-hub{ fill:var(--forest); }
+  .edge-line{ stroke:var(--lilac); stroke-width:1.4; opacity:0.8; }
+  .edge-arrow{ fill:var(--lilac); opacity:0.8; }
+  .edge-label{ font-family:'Manrope',sans-serif; font-style:italic; font-weight:500; font-size:14px; fill:var(--muted-dark); }
+  .chain-final{ margin-top:2rem; font-family:'Sora',sans-serif; font-weight:800; font-size:clamp(1.25rem,2.6vw,1.6rem); }
+
+  /* ---------- sobre ---------- */
+  .about-row{ margin-top:2.4rem; display:flex; align-items:center; gap:1.1rem; }
+  .avatar{ width:56px; height:56px; border-radius:50%; object-fit:cover; display:block; flex:none; border:2px solid var(--lilac-deep); }
+  .about-name{ font-size:1.02rem; font-weight:700; }
+  .about-role{ font-size:0.86rem; color:var(--muted-cream); }
+  .exp-chips{ margin-top:2rem; display:flex; flex-wrap:wrap; gap:0.6rem; }
+  .exp-chips span{ font-size:0.78rem; font-weight:700; padding:0.4rem 0.85rem; border-radius:100px; background:rgba(14,35,24,0.06); color:var(--forest); }
+
+  /* ---------- cta final ---------- */
+  .cta-final .wrap{ text-align:center; }
+  .cta-final .headline{ max-width:32rem; margin-left:auto; margin-right:auto; }
+  .cta-final .lede{ margin-top:1.3rem; max-width:32rem; margin-left:auto; margin-right:auto; }
+  .cta-final .btn-lime{ margin-top:2.2rem; font-size:1rem; padding:1.1rem 2rem; }
+  .cta-note{ margin-top:1.1rem; font-size:0.85rem; color:var(--muted-dark); }
+  .cta-final::before{
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22720%22 height=%22480%22 viewBox=%220 0 720 480%22%3E%3Cg transform=%22translate%2859.0 61.2%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28187.1 53.8%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28302.3 53.7%29 rotate%288%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28411.8 66.2%29 rotate%2822%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28541.9 57.9%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28662.3 53.1%29 rotate%28-16%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2851.2 173.8%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28185.6 176.5%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28294.7 175.9%29 rotate%28-16%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28419.1 175.6%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28535.1 185.2%29 rotate%2815%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28651.4 185.3%29 rotate%288%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2857.7 309.2%29 rotate%2822%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28174.2 308.2%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28297.9 291.5%29 rotate%2822%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28415.4 291.7%29 rotate%280%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28545.2 292.4%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28650.2 299.3%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2861.2 418.9%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28178.4 417.7%29 rotate%288%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28290.0 427.3%29 rotate%2815%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28414.2 417.9%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28532.0 429.8%29 rotate%28-9%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28650.2 422.2%29 rotate%280%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3C/svg%3E"); background-size:720px 480px; background-position:center; opacity:0.5;
+    -webkit-mask-image:radial-gradient(ellipse 46% 52% at 50% 50%, transparent 0 62%, #000 100%);
+    mask-image:radial-gradient(ellipse 46% 52% at 50% 50%, transparent 0 62%, #000 100%);
+  }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(14px); }
+  .reveal-in{ opacity:1; transform:translateY(0); transition:opacity .7s ease, transform .7s ease; }
+  @media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; } .reveal-in{ transition:none; } }
+
+  /* ================= EDUCAÇÃO HUB / ARTICLES ================= */
+  .article-back{
+    display:inline-flex; align-items:center; gap:0.5em; font-weight:700; font-size:0.8rem;
+    text-decoration:none; color:var(--muted-cream); background:none; border:none; cursor:pointer;
+    font-family:'Manrope',sans-serif; padding:0;
+  }
+  .article-back:hover{ color:var(--ink); }
+  .article-head{ margin-top:1.6rem; max-width:44rem; }
+  .article-lede{ margin-top:1.1rem; max-width:42rem; }
+  .article-subnav{ margin-top:2.2rem; display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .article-section{ max-width:54rem; padding:3.4rem 0; border-top:1px solid var(--line-cream); }
+  .article-section:first-of-type{ border-top:none; padding-top:3.6rem; }
+  .article-section h2{ font-size:clamp(1.5rem,3vw,2.05rem); }
+  .article-section .lede{ margin-top:1rem; }
+  .article-sub{ margin-top:2.4rem; }
+  .article-sub h4{ font-size:1.02rem; font-weight:800; font-family:'Sora',sans-serif; }
+  .article-sub p.note{ margin-top:0.6rem; font-size:0.95rem; color:var(--muted-cream); }
+  .rule-note{ margin-top:1.2rem; font-weight:800; font-size:0.95rem; font-family:'Sora',sans-serif; }
+
+  /* glossary */
+  .glossary-grid{ margin-top:2rem; display:grid; grid-template-columns:1fr 1fr; gap:0 3rem; }
+  @media (max-width:640px){ .glossary-grid{ grid-template-columns:1fr; } }
+  .gloss-item{ padding:1rem 0; border-top:1px solid var(--line-cream); }
+  .gloss-term{ font-weight:800; font-size:0.95rem; font-family:'Sora',sans-serif; }
+  .gloss-def{ margin-top:0.35rem; font-size:0.87rem; color:var(--muted-cream); }
+
+  /* stat tiles */
+  .stat-tiles{ margin-top:2rem; display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; }
+  @media (max-width:820px){ .stat-tiles{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:480px){ .stat-tiles{ grid-template-columns:1fr; } }
+  .stat-tile{ border-top:2px solid var(--lime); padding-top:1rem; }
+  .stat-num{ font-family:'Sora',sans-serif; font-weight:800; font-size:1.7rem; color:var(--forest); }
+  .stat-label{ margin-top:0.4rem; font-size:0.82rem; color:var(--muted-cream); }
+
+  /* compare cards */
+  .compare-2{ margin-top:2rem; display:grid; grid-template-columns:1fr auto 1fr; gap:1.2rem; align-items:center; }
+  @media (max-width:640px){ .compare-2{ grid-template-columns:1fr; } .compare-2 .vs{ justify-self:center; } }
+  .compare-card{ background:#fff; border:1px solid var(--line-cream); padding:1.6rem 1.7rem; border-radius:18px; }
+  .compare-card .who{ font-weight:800; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--forest-light); }
+  .compare-card p.quote{ margin-top:0.8rem; font-family:'Sora',sans-serif; font-weight:700; font-size:1.05rem; line-height:1.4; }
+  .vs{ font-family:'Sora',sans-serif; font-weight:800; color:var(--forest-light); font-size:1.4rem; }
+
+  /* data table */
+  .table-scroll{ margin-top:2rem; overflow-x:auto; border:1px solid var(--line-cream); border-radius:18px; }
+  .data-table{ width:100%; min-width:32rem; border-collapse:collapse; font-size:0.9rem; }
+  .data-table th, .data-table td{ text-align:left; padding:0.9rem 1.1rem; vertical-align:top; border-bottom:1px solid var(--line-cream); }
+  .data-table thead th{ font-family:'Sora',sans-serif; font-weight:800; font-size:0.66rem; letter-spacing:0.07em; text-transform:uppercase; color:var(--forest-light); background:rgba(14,35,24,0.04); }
+  .data-table tbody tr:last-child td{ border-bottom:none; }
+
+  /* window chart */
+  .window-chart{ margin-top:2.2rem; display:flex; flex-direction:column; gap:1.6rem; max-width:36rem; }
+  .window-row .wlabel{ font-weight:800; font-size:0.85rem; font-family:'Sora',sans-serif; }
+  .window-bar-track{ margin-top:0.5rem; height:14px; background:rgba(14,35,24,0.08); border-radius:100px; overflow:hidden; }
+  .window-bar-fill{ height:100%; background:var(--lime); border-radius:100px; }
+  .window-row:nth-child(2) .window-bar-fill{ background:var(--lilac); }
+  .window-row .wnote{ margin-top:0.5rem; font-size:0.86rem; color:var(--muted-cream); }
+
+  /* bridge diagram */
+  .bridge-diagram{ margin-top:2.6rem; display:flex; align-items:center; justify-content:center; gap:0; padding-top:1.8rem; }
+  .bridge-box{ font-weight:800; font-family:'Sora',sans-serif; font-size:0.76rem; text-align:center; padding:0.9rem 1rem; border:1.5px solid var(--forest); border-radius:14px; max-width:9rem; }
+  .bridge-line{ flex:1; height:2px; background:var(--line-cream); border-top:2px dashed var(--lilac-deep); position:relative; min-width:2rem; }
+  .bridge-line::after{
+    content:"Coexistência"; position:absolute; top:-1.9rem; left:50%; transform:translateX(-50%);
+    font-size:0.68rem; font-weight:800; letter-spacing:0.04em; color:var(--forest-light); white-space:nowrap;
+    font-family:'Sora',sans-serif;
+  }
+  @media (max-width:560px){
+    .bridge-diagram{ flex-direction:column; gap:0; }
+    .bridge-line{ width:2px; height:2.6rem; min-width:0; }
+    .bridge-line::after{ top:50%; left:1.2rem; transform:translateY(-50%); }
+  }
+
+  .partner-badge{ display:inline-flex; align-items:center; gap:0.55rem; margin-top:1.7rem; padding:0.5rem 1rem 0.5rem 0.85rem; border:1px solid var(--line-dark); border-radius:100px; font-size:0.78rem; font-weight:700; letter-spacing:0.03em; color:var(--cream); }
+  .partner-badge::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--lime); flex:none; }
+  .partner-badge.light{ border-color:var(--line-cream); color:var(--ink); margin-top:0.7rem; }
+  .partner-badge.light::before{ background:var(--forest); }
+
+  .band-clint{ background:var(--lilac); color:var(--forest); }
+  .band-clint .kicker{ color:var(--forest); }
+  .band-clint .lede{ color:rgba(14,35,24,0.78); }
+  .btn-forest{ display:inline-flex; align-items:center; gap:0.6em; font-weight:700; font-size:0.94rem; color:var(--cream); background:var(--forest); text-decoration:none; padding:1rem 1.8rem; border-radius:100px; transition:transform .18s ease, box-shadow .18s ease; font-family:'Manrope',sans-serif; }
+  .btn-forest:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,0.18); }
+
+  /* ===== alinhamento ao brand key ===== */
+  html,body{ margin:0; padding:0; }
+  :root{ --lime-deep:#7FA31A; --cream-deep:#E2DEC9; }
+  .toda h2.headline{ font-weight:700; letter-spacing:-0.025em; line-height:1.12; }
+  .hero-headline{ font-weight:800 !important; letter-spacing:-0.03em; }
+  .band-cream .kicker{ color:var(--lime-deep); }
+  .btn-lime,.btn-outline,.btn-forest,.header-cta{ border-radius:6px; }
+  .btn-lime,.header-cta{ font-weight:800; }
+  .tab-btn{ border-radius:4px; }
+  .pull{ border-radius:0; }
+
+  .service-grid{ gap:1px; background:var(--line-cream); border:1px solid var(--line-cream); }
+  .service{ background:var(--cream); border:0; border-radius:0; box-shadow:none; padding:clamp(1.5rem,3vw,2.2rem); }
+  .service:hover{ transform:none; box-shadow:none; background:var(--cream-deep); }
+  .service-icon,.service:nth-child(odd) .service-icon,.service:nth-child(even) .service-icon{ background:none; border-radius:0; width:34px; height:34px; color:var(--lime-deep); justify-content:flex-start; }
+  .service-icon svg{ width:30px; height:30px; }
+  .service h3{ font-weight:700; letter-spacing:-0.015em; }
+
+  .flow{ gap:1px; background:var(--line-dark); border:1px solid var(--line-dark); }
+  .band-cream .flow{ background:var(--line-cream); border-color:var(--line-cream); }
+  .flow-node,.flow-node:nth-child(even){ background:var(--forest); padding:1.8rem 1.4rem; }
+  .band-cream .flow-node{ background:var(--cream); }
+  .flow-node::after,.flow-node:not(:last-child)::after{ display:none; }
+  .flow-icon,.flow-node:nth-child(even) .flow-icon{ background:none; width:auto; height:auto; border-radius:0; justify-content:flex-start; color:var(--lime); font-weight:800; font-size:1.7rem; }
+  .flow-node p{ max-width:none; }
+  @media (max-width:820px){ .flow,.flow.cols-3{ gap:1px; } .flow-node{ padding:1.6rem 1.3rem; } }
+
+  .mission-line p{ font-weight:700; letter-spacing:-0.02em; }
+  .mission-line em,.mission-line.alt em{ color:var(--lime); font-weight:700; }
+  .mission-close{ margin-top:2rem; font-family:'Sora',sans-serif; font-weight:600; font-size:clamp(1.2rem,2.6vw,1.7rem); color:var(--muted-dark); }
+
+  .hero-bars{ display:none; }
+  .hero-art{ position:absolute; z-index:0; right:clamp(1rem,5vw,5rem); top:50%; transform:translateY(-46%); width:clamp(220px,32vw,420px); aspect-ratio:1/1; pointer-events:none; }
+  .hero-art svg{ width:100%; height:100%; display:block; }
+  @media (max-width:900px){ .hero-art{ opacity:0.28; top:auto; bottom:2rem; transform:none; width:min(60vw,300px); } }
+  .funnel-list .n,.check-row svg{ color:var(--lime-deep); }
+
+  /* ===== margem aproveitada, discreta ===== */
+  :root{ --pad-x:clamp(1.1rem,3vw,2.5rem); }
+  .band-dark:not(.cta-final)::before{
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22720%22 height=%22480%22 viewBox=%220 0 720 480%22%3E%3Cg transform=%22translate%2859.0 61.2%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28187.1 53.8%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28302.3 53.7%29 rotate%288%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28411.8 66.2%29 rotate%2822%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28541.9 57.9%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28662.3 53.1%29 rotate%28-16%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2851.2 173.8%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28185.6 176.5%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28294.7 175.9%29 rotate%28-16%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28419.1 175.6%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28535.1 185.2%29 rotate%2815%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28651.4 185.3%29 rotate%288%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2857.7 309.2%29 rotate%2822%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28174.2 308.2%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28297.9 291.5%29 rotate%2822%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28415.4 291.7%29 rotate%280%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28545.2 292.4%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28650.2 299.3%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2861.2 418.9%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28178.4 417.7%29 rotate%288%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28290.0 427.3%29 rotate%2815%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28414.2 417.9%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28532.0 429.8%29 rotate%28-9%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28650.2 422.2%29 rotate%280%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3C/svg%3E"); background-size:720px 480px; background-position:center; opacity:0.22;
+    -webkit-mask-image:linear-gradient(90deg,#000 0,transparent 15%,transparent 85%,#000 100%);
+    mask-image:linear-gradient(90deg,#000 0,transparent 15%,transparent 85%,#000 100%);
+  }
+  .hero::before{
+    opacity:0.4 !important;
+    -webkit-mask-image:linear-gradient(270deg,#000 0,rgba(0,0,0,0.55) 30%,transparent 75%) !important;
+    mask-image:linear-gradient(270deg,#000 0,rgba(0,0,0,0.55) 30%,transparent 75%) !important;
+  }
+  .hero-art{ display:none; }
+  .hero-copy{ max-width:56rem; }
+  .hero-headline{ font-size:clamp(2.6rem,7.4vw,6rem); }
+  .hero-lede{ max-width:38rem; }
+
+  /* ===== topo mais limpo e organizado ===== */
+  .hero-mark{ display:none; }
+  .hero{ padding-top:clamp(4.5rem,8vw,6.5rem); padding-bottom:clamp(3rem,6vw,4.5rem); }
+  .hero-copy{ max-width:62rem; }
+  .hero-headline{ font-size:clamp(2.4rem,5.4vw,4.4rem); line-height:1.06; max-width:17ch; letter-spacing:-0.03em; }
+  .hero-lede{ max-width:40rem; font-size:clamp(1.05rem,1.5vw,1.2rem); margin-top:1.6rem; }
+  .hero-actions{ display:flex; flex-wrap:wrap; align-items:center; gap:1rem 1.4rem; margin-top:2.2rem; }
+  .hero-actions .partner-badge{ margin-top:0; }
+  .chiprow{ margin-top:3.2rem; padding-top:1.5rem; border-top:1px solid var(--line-dark); align-items:center; }
+  .chip-label{ font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted-dark); margin-right:0.9rem; }
+  @media (max-width:640px){ .chip-label{ flex-basis:100%; margin-right:0; } }
+  .hero::before{ opacity:0.3 !important; }
+
+  /* ===== layout por seção ===== */
+  :root{ --pad-x:clamp(1.25rem,5vw,4rem); }
+  .wrap{ max-width:1120px; margin-inline:auto; }
+  .band-dark:not(.cta-final)::before{ opacity:0.26; }
+  .band-cream::before{
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22720%22 height=%22480%22 viewBox=%220 0 720 480%22%3E%3Cg transform=%22translate%2859.0 61.2%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28187.1 53.8%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28302.3 53.7%29 rotate%288%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28411.8 66.2%29 rotate%2822%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28541.9 57.9%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28662.3 53.1%29 rotate%28-16%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2851.2 173.8%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28185.6 176.5%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28294.7 175.9%29 rotate%28-16%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28419.1 175.6%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28535.1 185.2%29 rotate%2815%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28651.4 185.3%29 rotate%288%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2857.7 309.2%29 rotate%2822%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28174.2 308.2%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28297.9 291.5%29 rotate%2822%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28415.4 291.7%29 rotate%280%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28545.2 292.4%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28650.2 299.3%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2861.2 418.9%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28178.4 417.7%29 rotate%288%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28290.0 427.3%29 rotate%2815%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28414.2 417.9%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28532.0 429.8%29 rotate%28-9%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28650.2 422.2%29 rotate%280%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3C/svg%3E"); background-size:720px 480px; background-position:center; opacity:0.3;
+    -webkit-mask-image:linear-gradient(90deg,#000 0,transparent 14%,transparent 86%,#000 100%);
+    mask-image:linear-gradient(90deg,#000 0,transparent 14%,transparent 86%,#000 100%);
+  }
+
+  /* centralizadas */
+  .is-center .wrap{ text-align:center; }
+  .is-center .kicker{ justify-content:center; }
+  .is-center .kicker::after{ content:""; width:20px; height:2px; background:currentColor; display:block; flex:none; }
+  .is-center .prose,.is-center .headline,.is-center .lede{ margin-inline:auto; }
+  .hero.is-center::before{ opacity:0.38 !important;
+    -webkit-mask-image:linear-gradient(90deg,#000 0,transparent 26%,transparent 74%,#000 100%) !important;
+    mask-image:linear-gradient(90deg,#000 0,transparent 26%,transparent 74%,#000 100%) !important; }
+  .hero.is-center .hero-grid{ justify-content:center; }
+  .hero.is-center .hero-copy{ margin-inline:auto; max-width:60rem; }
+  .hero.is-center .hero-headline{ margin-inline:auto; max-width:16ch; }
+  .hero.is-center .hero-lede{ margin-inline:auto; }
+  .hero.is-center .hero-actions{ justify-content:center; }
+  .hero.is-center .chiprow{ justify-content:center; }
+  .hero.is-center .chip-label{ flex-basis:100%; margin:0 0 0.2rem; text-align:center; }
+  .is-center .mission-lines{ align-items:center; }
+  .is-center .chain{ justify-content:center; }
+  .is-center .pull{ margin-inline:auto; max-width:40rem; border-left:0; border-top:3px solid var(--lime); text-align:center; padding:1.4rem 1.6rem; }
+
+  /* títulos centralizados, conteúdo em grade */
+  .head-center .kicker{ justify-content:center; }
+  .head-center .kicker::after{ content:""; width:20px; height:2px; background:currentColor; display:block; flex:none; }
+  .head-center .headline{ margin-inline:auto; text-align:center; }
+
+  /* duas colunas */
+  .is-problem .wrap,.is-diag .wrap,.is-who .wrap,.is-about .wrap{ display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); column-gap:clamp(2rem,6vw,5rem); align-items:start; align-content:start; }
+  .is-problem .wrap > *,.is-diag .wrap > *,.is-who .wrap > *,.is-about .wrap > *{ grid-column:1; }
+
+  .is-problem .problem-grid{ grid-column:2; grid-row:1 / span 5; margin-top:0; grid-template-columns:1fr; gap:1.6rem; }
+  .is-problem .funnel-svg{ max-width:150px; }
+
+  .is-diag .checklist{ grid-column:2; grid-row:1 / span 6; margin-top:0; grid-template-columns:1fr; gap:0; }
+  .is-diag .checklist > .check-row:nth-last-child(2){ border-bottom:0; }
+  .is-diag .lede{ margin-top:1.1rem !important; }
+
+  .is-who .chipgrid{ grid-column:2; grid-row:1 / span 3; margin-top:0; flex-direction:column; gap:0; }
+  .is-who .chip{ border:0; border-top:1px solid var(--line-cream); border-radius:0; padding:1.05rem 0; width:100%; font-size:1rem; font-weight:600; }
+  .is-who .chip:last-child{ border-bottom:1px solid var(--line-cream); }
+  .is-who .chip .dot{ background:var(--lime-deep); }
+
+  .is-about .about-row{ grid-column:1; grid-row:1 / span 6; margin-top:0; flex-direction:column; align-items:flex-start; gap:1.1rem; }
+  .is-about .avatar{ width:100%; max-width:300px; height:auto; aspect-ratio:1/1; object-fit:cover; border-radius:0; }
+  .is-about .kicker,.is-about .headline,.is-about .lede,.is-about .exp-chips{ grid-column:2; }
+  .is-about .about-row{ order:-1; }
+
+  @media (max-width:900px){
+    .is-problem .wrap,.is-diag .wrap,.is-who .wrap,.is-about .wrap{ display:block; }
+    .is-problem .problem-grid,.is-diag .checklist,.is-who .chipgrid{ margin-top:2rem; }
+    .is-about .about-row{ margin-top:2rem; flex-direction:row; align-items:center; }
+    .is-about .avatar{ max-width:96px; }
+  }
+
+  .flow-diagram{ width:100%; min-width:900px; }
+
+  /* ===== margens laterais ===== */
+  .rail{ display:none; }
+  @media (min-width:1180px){
+    .wrap{ max-width:1040px; }
+    .band-cream::before,.band-dark:not(.cta-final)::before{ display:none !important; }
+    .rail{ display:block; position:fixed; top:0; bottom:0; width:calc((100vw - 1040px) / 2 - 28px); z-index:30; pointer-events:none; }
+    .rail-l{ left:0; }
+    .rail-r{ right:0; }
+    .rail::before{
+      content:""; position:absolute; inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22720%22 height=%22480%22 viewBox=%220 0 720 480%22%3E%3Cg transform=%22translate%2859.0 61.2%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28187.1 53.8%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28302.3 53.7%29 rotate%288%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28411.8 66.2%29 rotate%2822%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28541.9 57.9%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28662.3 53.1%29 rotate%28-16%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2851.2 173.8%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28185.6 176.5%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28294.7 175.9%29 rotate%28-16%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28419.1 175.6%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28535.1 185.2%29 rotate%2815%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28651.4 185.3%29 rotate%288%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2857.7 309.2%29 rotate%2822%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28174.2 308.2%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28297.9 291.5%29 rotate%2822%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28415.4 291.7%29 rotate%280%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.95%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28545.2 292.4%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28650.2 299.3%29 rotate%288%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%2861.2 418.9%29 rotate%28-9%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28178.4 417.7%29 rotate%288%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28290.0 427.3%29 rotate%2815%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.32%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28414.2 417.9%29 rotate%2815%29 scale%281.0%29 translate%28-32 -32%29%22 opacity=%220.2%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28532.0 429.8%29 rotate%28-9%29 scale%280.9%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3Cg transform=%22translate%28650.2 422.2%29 rotate%280%29 scale%280.8%29 translate%28-32 -32%29%22 opacity=%220.6%22%3E%3Cpath d=%22M12 46L30 22L51 33%22 stroke=%22%23C3F53C%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/%3E%3Ccircle cx=%2212%22 cy=%2246%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2230%22 cy=%2222%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3Ccircle cx=%2251%22 cy=%2233%22 r=%226%22 fill=%22%23C3F53C%22/%3E%3C/g%3E%3C/svg%3E"); background-size:540px 360px; background-position:center top;
+      opacity:0.3;
+    }
+    .rail-l::before{ -webkit-mask-image:linear-gradient(90deg,#000 35%,transparent 100%); mask-image:linear-gradient(90deg,#000 35%,transparent 100%); }
+    .rail-r::before{ -webkit-mask-image:linear-gradient(270deg,#000 35%,transparent 100%); mask-image:linear-gradient(270deg,#000 35%,transparent 100%); }
+    .rail span{
+      position:absolute; top:50%; left:50%; white-space:nowrap;
+      font-size:0.7rem; font-weight:700; letter-spacing:0.24em; text-transform:uppercase;
+      color:#7FA31A; opacity:0.9;
+    }
+    .rail-l span{ transform:translate(-50%,-50%) rotate(-90deg); }
+    .rail-r span{ transform:translate(-50%,-50%) rotate(90deg); }
+  }
+
+  /* ===== foto como detalhe ===== */
+  .is-about .wrap{ display:block; max-width:760px; margin-inline:auto; }
+  .is-about .about-row{ order:0; display:flex; flex-direction:row; align-items:center; gap:1rem; margin-top:2.2rem; padding-top:1.6rem; border-top:1px solid var(--line-cream); }
+  .is-about .avatar{ width:60px; height:60px; max-width:none; aspect-ratio:1/1; border-radius:50%; object-fit:cover; flex:none; }
+  .is-about .about-row .partner-badge{ margin-top:0.5rem; }
+
+  /* ===== ajustes finais ===== */
+  :root{ --lime-deep:#55730C; }
+  .hero-headline{ max-width:21ch !important; font-size:clamp(2.2rem,4.8vw,3.9rem) !important; }
+  .hero.is-center .hero-headline{ max-width:21ch !important; }
+  .hero-kicker{ letter-spacing:0.16em; }
+  .band-clint{ padding-block:clamp(1.6rem,3vw,2.3rem); }
+  .band-clint .clint-row{ display:flex; align-items:center; justify-content:space-between; gap:1.2rem 2rem; flex-wrap:wrap; text-align:left; }
+  .band-clint .kicker{ margin-bottom:0.35rem; }
+  .band-clint h2.headline{ font-size:clamp(1.15rem,2vw,1.5rem) !important; margin:0; max-width:none; }
+  .band-clint .lede{ margin:0.35rem 0 0; font-size:0.95rem; max-width:34rem; }
+  .band-clint .clint-row > div{ flex:1 1 22rem; min-width:0; }
+  .band-clint .btn-forest{ flex:none; }
+  @media (min-width:1180px){
+    .rail span{ color:var(--lime) !important; background:var(--forest); padding:1rem 0.5rem; border-radius:4px; opacity:0.95 !important; }
+  }
+  a.tab-btn{ text-decoration:none; display:inline-block; }
+  a.article-back{ text-decoration:none; }
+</style>
+</head>
+<body>
+
+<div class="toda">
+  <div class="rail rail-l" aria-hidden="true"><span>tóda · especialista em infoprodutores</span></div>
+  <div class="rail rail-r" aria-hidden="true"><span>parceiro certificado clint</span></div>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="TÓDA">
+      <svg viewBox="4 14 58 40" class="mark" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="12" y1="46" x2="30" y2="22" stroke="var(--lime)" stroke-width="5" stroke-linecap="round"/>
+        <line x1="30" y1="22" x2="51" y2="33" stroke="var(--lime)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="12" cy="46" r="6" fill="var(--lime)"/><circle cx="30" cy="22" r="6" fill="var(--lime)"/><circle cx="51" cy="33" r="6" fill="var(--lime)"/>
+      </svg>
+      <span class="brand-word">tóda</span>
+    </a>
+    <nav class="top-tabs">
+      <a class="tab-btn" href="/">TÓDA</a>
+      <a class="tab-btn" href="/educacao/" aria-current="page">TÓDA Educação</a>
+    </nav>
+    <a class="header-cta wa-link" href="#" target="_blank" rel="noopener"><span class="long">Conversar no </span>WhatsApp →</a>
+  </header>
+
+  <div id="view-edu" class="view">
+    <section class="band band-dark">
+      <div class="wrap">
+        <p class="kicker">TÓDA Educação</p>
+        <h1 class="headline prose">Conteúdo para quem constrói operação de verdade.</h1>
+        <p class="lede" style="margin-top:1.3rem;max-width:38rem;">Materiais para estudar, treinar times e estruturar processos comerciais com mais clareza: sobre WhatsApp, marketing, vendas e automação.</p>
+      </div>
+    </section>
+    <section class="band band-cream">
+      <div class="wrap">
+        <div class="service-grid reveal-target">
+          <a class="service edu-card" href="/educacao/whatsapp-oficial/">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3.5c-4.7 0-8.5 3.4-8.5 7.6 0 2.2 1 4.1 2.7 5.5l-.9 3.4 3.7-1.4c1 .3 2 .5 3 .5 4.7 0 8.5-3.4 8.5-7.6S16.7 3.5 12 3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8.6" cy="11.1" r="1" fill="currentColor"/><circle cx="12" cy="11.1" r="1" fill="currentColor"/><circle cx="15.4" cy="11.1" r="1" fill="currentColor"/></svg></div>
+            <h3>WhatsApp Oficial: a virada que sua operação está perdendo</h3>
+            <p class="desc">Os tipos de conta, o valor de um parceiro oficial (BSP), janelas de conversa, templates com foco em Utility e anúncios Click to WhatsApp com CAPI.</p>
+            <span class="go-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="service edu-card" href="/educacao/marketing-x-vendas/">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 8.5h9M12 8.5l-3-3M12 8.5l-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 15.5h-9M12 15.5l3-3M12 15.5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Marketing x Vendas: a queda de braço que os dados encerram</h3>
+            <p class="desc">Como usar dados e UTMs para acabar com a discussão eterna entre marketing e vendas, e onde configurar isso corretamente no CRM.</p>
+            <span class="go-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="service edu-card" href="/educacao/ia-que-vende/">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M19 14.5l.7 2.1L21.8 17.3l-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg></div>
+            <h3>A IA que vende enquanto você dorme</h3>
+            <p class="desc">O que um agente de IA pode fazer pela operação comercial: as duas camadas, e exemplos práticos por segmento.</p>
+            <span class="go-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="service edu-card" href="/educacao/manual-de-vendas/">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4h10v3a5 5 0 0 1-10 0V4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 5H4.3a3 3 0 0 0 3 4M17 5h2.7a3 3 0 0 1-3 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M12 12v2.8M9.3 19h5.4M9.7 19c0-1.7.7-2.4 2.3-2.4s2.3.7 2.3 2.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>O manual que separa quem bate meta de quem só tenta</h3>
+            <p class="desc">Glossário rápido, venda consultiva, qualificação, funil e cadência, contorno de objeções, métricas e rituais de gestão.</p>
+            <span class="go-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var WA_URL = "https://wa.me/554896640747?text=Oi!%20Vim%20pelo%20site%20da%20T%C3%93DA%20e%20quero%20conversar%20sobre%20IA%20na%20minha%20opera%C3%A7%C3%A3o.";
+  document.querySelectorAll(".wa-link").forEach(function(el){ el.setAttribute("href", WA_URL); });
+})();
+</script>
+
+</body>
+</html>

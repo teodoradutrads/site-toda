@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TÓDA — Especialista em infoprodutores</title>
 <meta name="description" content="Especialista em infoprodutores e parceiro certificado Clint. Processo, dado e IA aplicada com estratégia para estruturar a operação comercial de quem já vende e precisa escalar.">
+<link rel="canonical" href="https://todaeco.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TÓDA — Especialista em infoprodutores">
+<meta property="og:description" content="Especialista em infoprodutores e parceiro certificado Clint. Processo, dado e IA aplicada com estratégia para estruturar a operação comercial de quem já vende e precisa escalar.">
+<meta property="og:url" content="https://todaeco.com/">
+<meta property="og:locale" content="pt_BR">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E2318'/%3E%3Cg stroke='%23C3F53C' stroke-width='5' stroke-linecap='round'%3E%3Cline x1='12' y1='46' x2='30' y2='22'/%3E%3Cline x1='30' y1='22' x2='51' y2='33'/%3E%3C/g%3E%3Cg fill='%23C3F53C'%3E%3Ccircle cx='12' cy='46' r='6'/%3E%3Ccircle cx='30' cy='22' r='6'/%3E%3Ccircle cx='51' cy='33' r='6'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -556,6 +562,24 @@
   .is-about .about-row{ order:0; display:flex; flex-direction:row; align-items:center; gap:1rem; margin-top:2.2rem; padding-top:1.6rem; border-top:1px solid var(--line-cream); }
   .is-about .avatar{ width:60px; height:60px; max-width:none; aspect-ratio:1/1; border-radius:50%; object-fit:cover; flex:none; }
   .is-about .about-row .partner-badge{ margin-top:0.5rem; }
+
+  /* ===== ajustes finais ===== */
+  :root{ --lime-deep:#55730C; }
+  .hero-headline{ max-width:21ch !important; font-size:clamp(2.2rem,4.8vw,3.9rem) !important; }
+  .hero.is-center .hero-headline{ max-width:21ch !important; }
+  .hero-kicker{ letter-spacing:0.16em; }
+  .band-clint{ padding-block:clamp(1.6rem,3vw,2.3rem); }
+  .band-clint .clint-row{ display:flex; align-items:center; justify-content:space-between; gap:1.2rem 2rem; flex-wrap:wrap; text-align:left; }
+  .band-clint .kicker{ margin-bottom:0.35rem; }
+  .band-clint h2.headline{ font-size:clamp(1.15rem,2vw,1.5rem) !important; margin:0; max-width:none; }
+  .band-clint .lede{ margin:0.35rem 0 0; font-size:0.95rem; max-width:34rem; }
+  .band-clint .clint-row > div{ flex:1 1 22rem; min-width:0; }
+  .band-clint .btn-forest{ flex:none; }
+  @media (min-width:1180px){
+    .rail span{ color:var(--lime) !important; background:var(--forest); padding:1rem 0.5rem; border-radius:4px; opacity:0.95 !important; }
+  }
+  a.tab-btn{ text-decoration:none; display:inline-block; }
+  a.article-back{ text-decoration:none; }
 </style>
 </head>
 <body>
@@ -567,7 +591,7 @@
 
 
   <header class="site-header">
-    <a class="brand" href="#" data-view="toda" aria-label="TÓDA">
+    <a class="brand" href="/" aria-label="TÓDA">
       <svg viewBox="4 14 58 40" class="mark" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <line x1="12" y1="46" x2="30" y2="22" stroke="var(--lime)" stroke-width="5" stroke-linecap="round"/>
         <line x1="30" y1="22" x2="51" y2="33" stroke="var(--lime)" stroke-width="5" stroke-linecap="round"/>
@@ -576,8 +600,8 @@
       <span class="brand-word">tóda</span>
     </a>
     <nav class="top-tabs">
-      <button type="button" class="tab-btn" data-view="toda" aria-current="page">TÓDA</button>
-      <button type="button" class="tab-btn" data-view="edu">TÓDA Educação</button>
+      <a class="tab-btn" href="/" aria-current="page">TÓDA</a>
+      <a class="tab-btn" href="/educacao/">TÓDA Educação</a>
     </nav>
     <a class="header-cta wa-link" href="#" target="_blank" rel="noopener"><span class="long">Conversar no </span>WhatsApp →</a>
   </header>
@@ -598,8 +622,8 @@
         <line x1="30" y1="22" x2="51" y2="33" stroke="var(--lime)" stroke-width="5" stroke-linecap="round"/>
         <circle cx="12" cy="46" r="6" fill="var(--lime)"/><circle cx="30" cy="22" r="6" fill="var(--lime)"/><circle cx="51" cy="33" r="6" fill="var(--lime)"/>
       </svg>
-            <p class="kicker hero-kicker">Especialista em infoprodutores</p>
-            <h1 class="hero-headline">TÓDA operação precisa de <span class="accent">estrutura.</span></h1>
+            <p class="kicker hero-kicker">TÓDA operação precisa de estrutura.</p>
+            <h1 class="hero-headline">Especialista em estruturar a operação comercial de <span class="accent">infoprodutores.</span></h1>
             <p class="lede hero-lede">Organizamos processos, dados, performance e inteligência para infoprodutores que querem crescer com mais controle e menos improviso.</p>
             <div class="hero-actions">
               <a class="btn-lime wa-link" href="#" target="_blank" rel="noopener">Quero estruturar minha operação <span class="arrow">→</span></a>
@@ -864,17 +888,7 @@
       </div>
     </section>
 
-    <!-- TESTE CLINT -->
-    <section id="clint" class="band band-clint is-center">
-      <div class="wrap">
-        <p class="kicker">Parceiro certificado Clint</p>
-        <h2 class="headline prose reveal-target">Teste a Clint com 10% de desconto.</h2>
-        <p class="lede prose reveal-target" style="margin-top:1.1rem;">A TÓDA é parceira certificada da Clint. Crie sua conta pelo nosso link e comece com 10% de desconto.</p>
-        <div class="reveal-target" style="margin-top:2rem;">
-          <a class="btn-forest" href="https://app.useclint.com/signup?ref=V7bkLS4jldB2" target="_blank" rel="noopener sponsored">Testar a Clint com 10% de desconto <span class="arrow">→</span></a>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- CTA FINAL -->
     <section class="band band-dark cta-final">
@@ -887,667 +901,45 @@
       </div>
     </section>
 
+    <!-- TESTE CLINT -->
+    <section id="clint" class="band band-clint">
+      <div class="wrap clint-row">
+        <div>
+          <p class="kicker">Parceiro certificado Clint</p>
+          <h2 class="headline">Teste a Clint com 10% de desconto.</h2>
+          <p class="lede">A TÓDA é parceira certificada da Clint. Crie sua conta pelo nosso link e comece com 10% de desconto.</p>
+        </div>
+        <a class="btn-forest" href="https://app.useclint.com/signup?ref=V7bkLS4jldB2" target="_blank" rel="noopener sponsored">Testar a Clint com 10% de desconto <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+
   </div>
 
   <!-- ======================================================= -->
   <!-- VIEW: TÓDA EDUCAÇÃO (hub)                                -->
   <!-- ======================================================= -->
-  <div id="view-edu" class="view" hidden>
-    <section class="band band-dark">
-      <div class="wrap">
-        <p class="kicker">TÓDA Educação</p>
-        <h1 class="headline prose">Conteúdo para quem constrói operação de verdade.</h1>
-        <p class="lede" style="margin-top:1.3rem;max-width:38rem;">Materiais para estudar, treinar times e estruturar processos comerciais com mais clareza: sobre WhatsApp, marketing, vendas e automação.</p>
-      </div>
-    </section>
-    <section class="band band-cream">
-      <div class="wrap">
-        <div class="service-grid reveal-target">
-          <a class="service edu-card" href="#" data-view="article-whatsapp">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3.5c-4.7 0-8.5 3.4-8.5 7.6 0 2.2 1 4.1 2.7 5.5l-.9 3.4 3.7-1.4c1 .3 2 .5 3 .5 4.7 0 8.5-3.4 8.5-7.6S16.7 3.5 12 3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8.6" cy="11.1" r="1" fill="currentColor"/><circle cx="12" cy="11.1" r="1" fill="currentColor"/><circle cx="15.4" cy="11.1" r="1" fill="currentColor"/></svg></div>
-            <h3>WhatsApp Oficial: a virada que sua operação está perdendo</h3>
-            <p class="desc">Os tipos de conta, o valor de um parceiro oficial (BSP), janelas de conversa, templates com foco em Utility e anúncios Click to WhatsApp com CAPI.</p>
-            <span class="go-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="service edu-card" href="#" data-view="article-marketing">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 8.5h9M12 8.5l-3-3M12 8.5l-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 15.5h-9M12 15.5l3-3M12 15.5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Marketing x Vendas: a queda de braço que os dados encerram</h3>
-            <p class="desc">Como usar dados e UTMs para acabar com a discussão eterna entre marketing e vendas, e onde configurar isso corretamente no CRM.</p>
-            <span class="go-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="service edu-card" href="#" data-view="article-automacao">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M19 14.5l.7 2.1L21.8 17.3l-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg></div>
-            <h3>A IA que vende enquanto você dorme</h3>
-            <p class="desc">O que um agente de IA pode fazer pela operação comercial: as duas camadas, e exemplos práticos por segmento.</p>
-            <span class="go-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="service edu-card" href="#" data-view="article-vendas">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4h10v3a5 5 0 0 1-10 0V4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 5H4.3a3 3 0 0 0 3 4M17 5h2.7a3 3 0 0 1-3 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M12 12v2.8M9.3 19h5.4M9.7 19c0-1.7.7-2.4 2.3-2.4s2.3.7 2.3 2.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>O manual que separa quem bate meta de quem só tenta</h3>
-            <p class="desc">Glossário rápido, venda consultiva, qualificação, funil e cadência, contorno de objeções, métricas e rituais de gestão.</p>
-            <span class="go-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </div>
+  
 
   <!-- ======================================================= -->
   <!-- VIEW: ARTIGO — WhatsApp Meta & WhatsApp para o CS        -->
   <!-- ======================================================= -->
-  <div id="view-article-whatsapp" class="view" hidden>
-    <section class="band band-cream">
-      <div class="wrap">
-        <button type="button" class="article-back" data-view="edu"><span class="arrow">←</span> TÓDA Educação</button>
-        <div class="article-head">
-          <p class="kicker" style="margin-top:1.6rem;">WhatsApp para o CS</p>
-          <h1 class="headline">WhatsApp Oficial: a virada que sua operação está perdendo</h1>
-          <p class="lede article-lede">O WhatsApp é o coração da operação dos nossos clientes. Um CS especialista precisa dominar os tipos de conta, o valor de um parceiro oficial (BSP), os templates, com foco em Utility, e como funcionam os anúncios Click to WhatsApp com CAPI.</p>
-        </div>
-        <nav class="article-subnav">
-          <a class="chip" href="#wa-tipos">Tipos de WhatsApp</a>
-          <a class="chip" href="#wa-bsp">BSP oficial</a>
-          <a class="chip" href="#wa-janelas">Janelas de conversa</a>
-          <a class="chip" href="#wa-templates">Templates &amp; Utility</a>
-          <a class="chip" href="#wa-ctwa">Click to WhatsApp &amp; CAPI</a>
-        </nav>
-
-        <article>
-          <section id="wa-tipos" class="article-section">
-            <p class="kicker">1 · Os 3 tipos de WhatsApp</p>
-            <h2>Em qual WhatsApp o cliente está hoje?</h2>
-            <p class="lede">A primeira coisa a saber identificar é o modo em que o cliente opera. Isso define o que ele pode, e não pode, fazer.</p>
-
-            <div class="service-grid cols-3">
-              <div class="service">
-                <span class="tag">App gratuito</span>
-                <h3>WhatsApp Business</h3>
-                <p class="desc">O aplicativo verde de celular, feito para pequenos negócios. Funciona manualmente, no dispositivo.</p>
-                <ul>
-                  <li>Catálogo, respostas rápidas, etiquetas</li>
-                  <li>1 número por celular, poucos dispositivos</li>
-                  <li>Não escala: sem múltiplos atendentes de verdade, sem automação oficial</li>
-                  <li>Conectar por vias não oficiais é risco de banimento</li>
-                </ul>
-              </div>
-              <div class="service">
-                <span class="tag">API oficial</span>
-                <h3>WhatsApp Oficial (API)</h3>
-                <p class="desc">O número conectado via API oficial da Meta, através de um parceiro homologado (BSP). É o modo profissional.</p>
-                <ul>
-                  <li>Vários atendentes no mesmo número</li>
-                  <li>Automação, agentes de IA e disparos por template</li>
-                  <li>Selo de qualidade do número e muito menos risco de ban</li>
-                  <li>Exige conta Meta Business e número dedicado à API</li>
-                </ul>
-              </div>
-              <div class="service">
-                <span class="tag">O melhor dos dois</span>
-                <h3>WhatsApp em Coexistência</h3>
-                <p class="desc">Recurso que permite usar o mesmo número no app WhatsApp Business e na API oficial ao mesmo tempo.</p>
-                <ul>
-                  <li>O dono continua usando o app no celular</li>
-                  <li>E o número roda na API em paralelo</li>
-                  <li>Migração sem perder histórico nem trocar de número</li>
-                  <li>Ótimo argumento para tirar o medo de "sair do meu WhatsApp"</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="bridge-diagram" aria-hidden="true">
-              <span class="bridge-box">WhatsApp Business (app)</span>
-              <span class="bridge-line"></span>
-              <span class="bridge-box">WhatsApp Oficial (API)</span>
-            </div>
-
-            <p class="pull">Regra prática: diagnosticar em qual modo o cliente está e conduzir para o Oficial, usando a Coexistência quando ele tem receio de mudar de número ou perder as conversas.</p>
-          </section>
-
-          <section id="wa-bsp" class="article-section">
-            <p class="kicker">2 · O valor de um parceiro oficial (BSP)</p>
-            <h2>Por que operar via um BSP muda tudo</h2>
-            <p class="lede">BSP significa Business Solution Provider: um parceiro homologado pela Meta para fornecer acesso oficial à API do WhatsApp. Operar através de um BSP oficial muda o que a conta pode fazer, e é um argumento importante para levar o cliente ao Oficial.</p>
-            <div class="service-grid">
-              <div class="service">
-                <h3>Menos bloqueios e banimentos</h3>
-                <p class="desc">Operar dentro da API oficial protege o número. Milhões de contas não oficiais são banidas pela Meta todos os anos; quem está no oficial via um BSP fica seguro para escalar.</p>
-              </div>
-              <div class="service">
-                <h3>Acesso e homologação oficiais</h3>
-                <p class="desc">Envio de templates, disparos em massa e recursos avançados ficam liberados por ser parceiro homologado, não por gambiarra.</p>
-              </div>
-              <div class="service">
-                <h3>Novidades primeiro</h3>
-                <p class="desc">Parceiros oficiais da Meta costumam ter acesso antecipado a novas funcionalidades, agentes, novos formatos de template, antes de chegarem ao mercado em geral.</p>
-              </div>
-              <div class="service">
-                <h3>Qualidade e suporte do número</h3>
-                <p class="desc">Gestão de qualidade, verificação e suporte reduzem o risco de o número cair para qualidade baixa e perder capacidade de envio.</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="wa-janelas" class="article-section">
-            <p class="kicker">3 · Janelas de conversa (24h × 72h)</p>
-            <h2>O relógio que define quando dá para responder de graça</h2>
-            <p class="lede">A janela de conversa é o período em que a empresa pode responder o cliente livremente, sem template e sem custo por template. Fora da janela, só dá para reabrir a conversa com um template aprovado.</p>
-
-            <div class="window-chart">
-              <div class="window-row">
-                <span class="wlabel">API oficial: janela padrão de 24 horas</span>
-                <div class="window-bar-track"><div class="window-bar-fill" style="width:33%;"></div></div>
-                <p class="wnote">Quando o cliente manda uma mensagem, abre uma janela de 24h para conversar livremente. Passado esse prazo, só dá para retomar com template; por isso a regra dos 5 minutos vale ouro: responda enquanto a janela está quente.</p>
-              </div>
-              <div class="window-row">
-                <span class="wlabel">Click to WhatsApp: janela estendida de 72 horas</span>
-                <div class="window-bar-track"><div class="window-bar-fill" style="width:100%;"></div></div>
-                <p class="wnote">Quando o lead chega por um anúncio Click to WhatsApp, a Meta concede uma janela maior, de 72 horas, para conversar livremente, sem template. Mais tempo para qualificar e converter o lead pago antes de precisar reabrir com template.</p>
-              </div>
-            </div>
-
-            <p class="pull">Resumindo: mensagem normal do WhatsApp tem 24h de janela. Lead vindo de anúncio Click to WhatsApp tem 72h. Fora da janela, só com template aprovado, de preferência Utility.</p>
-          </section>
-
-          <section id="wa-templates" class="article-section">
-            <p class="kicker">4 · Templates &amp; o foco em Utility</p>
-            <h2>Nem todo template é igual</h2>
-            <p class="lede">Para iniciar conversa fora da janela de 24h, a Meta exige templates (mensagens modelo) aprovados. Eles têm categorias, e vale sempre incentivar o uso de Utility.</p>
-
-            <div class="table-scroll">
-              <table class="data-table">
-                <thead><tr><th>Categoria</th><th>Para quê</th><th>Nota</th></tr></thead>
-                <tbody>
-                  <tr><td><strong>Utility</strong> (utilitário)</td><td>Relacionado a uma ação ou transação do cliente: confirmação, atualização de pedido, lembrete, cobrança.</td><td>Foco. Custo menor e alta aprovação e entrega.</td></tr>
-                  <tr><td>Marketing</td><td>Promoções, ofertas, novidades, reengajamento.</td><td>Custo maior; mais sujeito a ser visto como spam.</td></tr>
-                  <tr><td>Authentication</td><td>Códigos de verificação (OTP), login.</td><td>Uso específico.</td></tr>
-                  <tr><td>Service</td><td>Respostas dentro da janela de conversa, sem template.</td><td>Conversa em aberto.</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="article-sub">
-              <h4>Por que incentivar Utility</h4>
-              <div class="checklist" style="margin-top:1rem;">
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Custa menos que Marketing: templates utility enviados dentro de uma janela de atendimento aberta podem até sair de graça.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Aprova mais fácil e entrega melhor: por ser transacional, tem menos rejeição da Meta e menos bloqueio pelo usuário.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Mantém a qualidade do número alta, porque o cliente percebe a mensagem como útil, não como spam.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Muita coisa que parece marketing pode ser reescrita como utility (confirmação, status, lembrete): esse é o pulo do gato.</p></div>
-              </div>
-            </div>
-
-            <div class="article-sub">
-              <h4>Como é cobrado</h4>
-              <p class="note">A Meta cobra esse tipo de mensagem por conversa e categoria; o valor varia por categoria e por país. Como Utility custa menos e tem menos rejeição, incentivar essa categoria também protege o orçamento de mensageria do cliente e mantém a operação rodando sem interrupções.</p>
-            </div>
-
-            <div class="article-sub">
-              <h4>IA pode ajudar na criação de templates</h4>
-              <p class="note">Ferramentas de IA já ajudam a redigir e revisar templates para maximizar a chance de aprovação como Utility, reduzindo rejeição e acelerando a liberação. Vale reforçar esse tipo de apoio sempre que um cliente for criar um template novo.</p>
-            </div>
-          </section>
-
-          <section id="wa-ctwa" class="article-section">
-            <p class="kicker">5 · Anúncios Click to WhatsApp + CAPI</p>
-            <h2>A levantada de mão direto no canal que mais converte</h2>
-            <p class="lede">Click to WhatsApp Ads (CTWA) são anúncios no Facebook e Instagram que, em vez de levar a um site, abrem uma conversa no WhatsApp.</p>
-
-            <div class="article-sub">
-              <h4>Por que incentivar CTWA</h4>
-              <div class="checklist" style="margin-top:1rem;">
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">O lead cai já conversando, sem formulário, sem fricção, e o atendimento assume na hora.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Combina com resposta rápida, qualificação e cadência dentro do WhatsApp.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Ótimo para volume com custo controlado, especialmente em infoproduto, saúde e serviços.</p></div>
-              </div>
-            </div>
-
-            <div class="article-sub">
-              <h4>CAPI (API de Conversões)</h4>
-              <p class="note">A CAPI envia de volta para a Meta os eventos de conversão reais, lead qualificado, agendamento, venda, que acontecem na operação. Sem isso, a Meta só enxerga o clique; com a CAPI, ela aprende quem realmente vira cliente.</p>
-            </div>
-
-            <div class="flow cols-3" style="margin-top:2.4rem;">
-              <div class="flow-node"><div class="flow-icon">01</div><h4>Anúncio CTWA</h4><p>Cliente clica no anúncio e abre conversa no WhatsApp.</p></div>
-              <div class="flow-node"><div class="flow-icon">02</div><h4>Atendimento qualifica</h4><p>Time ou agente de IA qualifica e conduz a conversa.</p></div>
-              <div class="flow-node"><div class="flow-icon">03</div><h4>CAPI devolve o evento</h4><p>Lead qualificado ou venda volta para a Meta via CAPI.</p></div>
-            </div>
-            <div class="flow cols-3" style="margin-top:1.6rem;">
-              <div class="flow-node" style="grid-column:1;"><div class="flow-icon">04</div><h4>Campanha otimiza</h4><p>A Meta passa a buscar mais gente com perfil de quem converte.</p></div>
-            </div>
-
-            <p class="pull">Ideia central: rodar anúncios que abrem no WhatsApp e configurar bem a CAPI. Com o tempo, a Meta otimiza a campanha pelos leads que de fato viram venda, não pelos cliques.</p>
-          </section>
-        </article>
-      </div>
-    </section>
-  </div>
+  
 
   <!-- ======================================================= -->
   <!-- VIEW: ARTIGO — Marketing e Vendas                         -->
   <!-- ======================================================= -->
-  <div id="view-article-marketing" class="view" hidden>
-    <section class="band band-cream">
-      <div class="wrap">
-        <button type="button" class="article-back" data-view="edu"><span class="arrow">←</span> TÓDA Educação</button>
-        <div class="article-head">
-          <p class="kicker" style="margin-top:1.6rem;">Marketing × Vendas</p>
-          <h1 class="headline">Marketing x Vendas: a queda de braço que os dados encerram</h1>
-          <p class="lede article-lede">Uma das brigas mais antigas de qualquer empresa é entre marketing e vendas. Como CS, você ajuda o cliente a acabar com essa briga usando dados.</p>
-        </div>
-        <nav class="article-subnav">
-          <a class="chip" href="#mkt-briga">A briga de sempre</a>
-          <a class="chip" href="#mkt-dado">Quem resolve é o dado</a>
-          <a class="chip" href="#mkt-estrategias">Estratégias práticas</a>
-        </nav>
-
-        <article>
-          <section id="mkt-briga" class="article-section">
-            <p class="kicker">A briga de sempre</p>
-            <h2>Quando o resultado não vem, cada lado aponta para o outro</h2>
-            <div class="compare-2">
-              <div class="compare-card">
-                <span class="who">Vendas diz</span>
-                <p class="quote">"Não vendi porque não tem lead, e os que chegam vêm ruins, desqualificados."</p>
-              </div>
-              <span class="vs">×</span>
-              <div class="compare-card">
-                <span class="who">Marketing diz</span>
-                <p class="quote">"Eu entrego lead sim; o time é que não sabe converter o que chega."</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="mkt-dado" class="article-section">
-            <p class="kicker">Quem resolve a briga é o dado</p>
-            <h2>Sem número, vira discussão de opinião</h2>
-            <p class="lede">Com os dados certos, a pergunta sobre o lead estar ruim ou o time não saber vender tem resposta, e marketing e vendas passam a olhar para o mesmo painel. Esse é o papel do CS: ajudar o cliente a montar essa visão.</p>
-          </section>
-
-          <section id="mkt-estrategias" class="article-section">
-            <p class="kicker">Estratégias práticas</p>
-            <h2>O que estruturar para o cliente medir a relação marketing e vendas</h2>
-
-            <div class="article-sub">
-              <h4>Acompanhar UTMs</h4>
-              <p class="note">UTMs são etiquetas que se adicionam ao link do anúncio para saber de onde cada lead veio.</p>
-              <div class="table-scroll">
-                <table class="data-table">
-                  <thead><tr><th>Parâmetro</th><th>O que indica</th><th>Exemplo</th></tr></thead>
-                  <tbody>
-                    <tr><td><code>utm_source</code></td><td>A origem</td><td>Instagram</td></tr>
-                    <tr><td><code>utm_medium</code></td><td>O meio</td><td>Pago</td></tr>
-                    <tr><td><code>utm_campaign</code></td><td>A campanha</td><td>Lançamento Setembro</td></tr>
-                    <tr><td><code>utm_content</code></td><td>O anúncio ou criativo</td><td>Vídeo depoimento</td></tr>
-                    <tr><td><code>utm_term</code></td><td>A palavra-chave</td><td>busca paga</td></tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="note" style="margin-top:1rem;">Trazendo as UTMs para dentro do CRM, dá para saber exatamente qual mídia, campanha e anúncio gerou cada lead, e comparar o que converte de verdade.</p>
-            </div>
-
-            <div class="article-sub">
-              <h4>Indicadores por lead, campanha e UTM</h4>
-              <p class="note">Dá para criar indicadores que acompanham a conversão de cada origem, por lead, por campanha ou por UTM. Assim você enxerga não só quanto lead cada campanha traz, mas quanto vira venda, e identifica se uma campanha está trazendo lead desqualificado.</p>
-            </div>
-
-            <div class="article-sub">
-              <h4>Atenção técnica (isso muda tudo)</h4>
-              <p class="note">Esses campos de origem e qualificação precisam estar no <strong>NEGÓCIO</strong>, a oportunidade, não no contato nem na empresa. Se ficarem no contato ou na empresa, quando houver mesclagem de cadastros a informação pode se perder: o sistema mantém só a última, e você perde a contagem real de quantos negócios cada campanha gerou. O resultado são dados irreais.</p>
-              <div class="chiprow" style="margin-top:1.2rem;">
-                <span class="chip on">✓ Negócio</span>
-                <span class="chip off">Contato</span>
-                <span class="chip off">Empresa</span>
-              </div>
-              <p class="rule-note">Campo de análise de campanha: sempre no negócio.</p>
-            </div>
-
-            <div class="article-sub">
-              <h4>Anúncios Click to WhatsApp</h4>
-              <p class="note">Incentive o cliente a rodar anúncios Click to WhatsApp: o lead já cai conversando no WhatsApp, sem formulário. Combina com a CAPI para a campanha otimizar sozinha pelos leads que realmente viram venda.</p>
-              <p style="margin-top:0.8rem;"><a class="btn-outline" href="#" data-view="article-whatsapp" data-anchor="wa-ctwa" style="padding:0.7rem 1.3rem;font-size:0.86rem;">Ver como funciona a CAPI, no artigo sobre WhatsApp <span class="arrow">→</span></a></p>
-            </div>
-
-            <div class="article-sub">
-              <h4>Campanhas para aproveitar a base</h4>
-              <p class="note">Use campanhas multicanal para extrair mais da base que o cliente já tem: mais canais para alcançar o mesmo lead aumentam a chance de conexão.</p>
-              <div class="chiprow" style="margin-top:1rem;">
-                <span class="chip"><span class="dot"></span>WhatsApp</span>
-                <span class="chip"><span class="dot"></span>Voz</span>
-                <span class="chip"><span class="dot"></span>SMS</span>
-                <span class="chip"><span class="dot"></span>SMS Flash</span>
-              </div>
-              <p class="note" style="margin-top:0.8rem;">Ótimo para reativar leads parados, avisar de novidades e criar mais pontos de contato, sem depender só de gerar lead novo.</p>
-            </div>
-
-            <p class="pull" style="margin-top:2.2rem;">Crescer não é só trazer mais lead: é converter melhor o que já entra e aproveitar a base que já existe.</p>
-          </section>
-        </article>
-      </div>
-    </section>
-  </div>
+  
 
   <!-- ======================================================= -->
   <!-- VIEW: ARTIGO — Automação & IA                             -->
   <!-- ======================================================= -->
-  <div id="view-article-automacao" class="view" hidden>
-    <section class="band band-cream">
-      <div class="wrap">
-        <button type="button" class="article-back" data-view="edu"><span class="arrow">←</span> TÓDA Educação</button>
-        <div class="article-head">
-          <p class="kicker" style="margin-top:1.6rem;">Automação &amp; IA</p>
-          <h1 class="headline">A IA que vende enquanto você dorme</h1>
-          <p class="lede article-lede">A tecnologia entra para deixar o trabalho de todo o time, humano e cliente, mais inteligente. O objetivo nunca é substituir pessoas: é liberar tempo para o que é estratégico e, no fim, ajudar a vender mais.</p>
-          <div style="margin-top:1.8rem;">
-            <a class="btn-lime" href="https://app.useclint.com/signup?ref=RPgPso3o1MTJ" target="_blank" rel="noopener">Crie aqui seu trial de 7 dias na Clint <span class="arrow">→</span></a>
-          </div>
-        </div>
-        <nav class="article-subnav">
-          <a class="chip" href="#ia-potencializar">IA não é para demitir</a>
-          <a class="chip" href="#ia-camadas">Duas camadas</a>
-          <a class="chip" href="#ia-segmentos">IA por segmento</a>
-        </nav>
-
-        <article>
-          <section id="ia-potencializar" class="article-section">
-            <p class="kicker">IA não é para demitir, é para potencializar</p>
-            <h2>A IA multiplica a capacidade do time que já existe</h2>
-            <p class="lede">A automação e a IA existem para facilitar e deixar o trabalho do time humano mais inteligente, não para desligar ninguém. A IA assume o repetitivo e o volumoso; as pessoas ganham espaço para serem mais estratégicas: cuidar do relacionamento, ler dados, tomar decisões e fechar.</p>
-            <p class="note" style="margin-top:1rem;color:var(--muted-cream);">Ao orientar um cliente, o enquadramento é sempre esse: a IA multiplica a capacidade do time que ele já tem, não o substitui.</p>
-          </section>
-
-          <section id="ia-camadas" class="article-section">
-            <p class="kicker">Duas camadas</p>
-            <h2>Automação tradicional + agente conversacional</h2>
-            <p class="lede">Um agente de IA aplicado à operação comercial normalmente cobre duas camadas, que trabalham juntas.</p>
-            <div class="service-grid">
-              <div class="service">
-                <span class="tag">Camada 1</span>
-                <h3>Automação tradicional</h3>
-                <p class="desc">Gatilhos e réguas: mensagens por mudança de etapa ou status, reativação de leads parados, disparos de voz e SMS, confirmações automáticas.</p>
-              </div>
-              <div class="service">
-                <span class="tag">Camada 2</span>
-                <h3>Agente conversacional (IA)</h3>
-                <p class="desc">Conversa de verdade: qualifica, tira dúvidas, contorna objeções simples, agenda e decide o próximo passo, para qual vendedor encaminhar, qualificar ou desqualificar.</p>
-              </div>
-            </div>
-            <p class="pull">Hoje já é possível configurar esse tipo de agente em linguagem natural, sem código, para que ele qualifique, responda, agende e conduza conversas dentro do WhatsApp, 24 horas por dia, mantendo o tom de voz da marca.</p>
-          </section>
-
-          <section id="ia-segmentos" class="article-section">
-            <p class="kicker">O que a IA faz em cada segmento</p>
-            <h2>O mesmo agente, processos diferentes</h2>
-            <p class="lede">O mesmo tipo de agente pode executar processos diferentes conforme o negócio, quase sempre girando em torno de pré-qualificação e agendamento, que é onde ele mais destrava resultado.</p>
-
-            <div class="service-grid cols-3">
-              <div class="service">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-                <h3>Saúde</h3>
-                <ul>
-                  <li>Pré-qualifica o paciente (motivo, convênio, urgência)</li>
-                  <li>Agenda a consulta na agenda certa</li>
-                  <li>Confirma 48h antes e reduz no-show</li>
-                  <li>Reativa base inativa e agenda retorno</li>
-                </ul>
-              </div>
-              <div class="service">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8.5L12 4l10 4.5-10 4.5-10-4.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 10.8v4.6c0 1.4 2.7 2.6 6 2.6s6-1.2 6-2.6v-4.6" stroke="currentColor" stroke-width="1.5"/></svg></div>
-                <h3>Educação</h3>
-                <ul>
-                  <li>Responde o lead de anúncio em segundos</li>
-                  <li>Qualifica o candidato (curso, perfil, momento)</li>
-                  <li>Agenda a visita ou a matrícula</li>
-                  <li>Acompanha a documentação até fechar</li>
-                </ul>
-              </div>
-              <div class="service">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="4.5" width="18" height="13" rx="1.4" stroke="currentColor" stroke-width="1.5"/><path d="M10 8.3v5.4l5-2.7-5-2.7z" fill="currentColor"/><line x1="8" y1="20.5" x2="16" y2="20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-                <h3>Infoproduto</h3>
-                <ul>
-                  <li>Aguenta o volume de leads no pico da live</li>
-                  <li>Qualifica e separa quente de frio</li>
-                  <li>Recupera carrinho abandonado em minutos</li>
-                  <li>Agenda a call para o time de high ticket</li>
-                </ul>
-              </div>
-              <div class="service">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="12" rx="1.4" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5" stroke="currentColor" stroke-width="1.5"/><line x1="3.5" y1="12.5" x2="20.5" y2="12.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
-                <h3>Serviços B2B</h3>
-                <ul>
-                  <li>Qualifica o lead (dor, contexto, decisor)</li>
-                  <li>Agenda a reunião com o closer</li>
-                  <li>Envia briefing antes do encontro</li>
-                  <li>Faz o follow-up que não depende de memória</li>
-                </ul>
-              </div>
-              <div class="service">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 20.5V11l5 3V11l5 3V7l6 3.5v10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><line x1="3" y1="20.5" x2="21" y2="20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-                <h3>Indústria</h3>
-                <ul>
-                  <li>Atende o representante e o comprador no WhatsApp</li>
-                  <li>Consulta estoque e tabela e tira dúvidas de pedido</li>
-                  <li>Encaminha para o vendedor certo</li>
-                  <li>Registra tudo no CRM sem digitação manual</li>
-                </ul>
-              </div>
-              <div class="service">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="9.5" cy="20" r="1.3" fill="currentColor"/><circle cx="18" cy="20" r="1.3" fill="currentColor"/><path d="M2.5 4h2.4l2 12.2h11.3l1.8-8.2H6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
-                <h3>E-commerce</h3>
-                <ul>
-                  <li>Recupera carrinho abandonado por WhatsApp</li>
-                  <li>Resgata boleto não pago antes de vencer</li>
-                  <li>Reativa base inativa por categoria</li>
-                  <li>Qualifica e direciona quem quer atendimento</li>
-                </ul>
-              </div>
-            </div>
-
-            <p class="pull" style="margin-top:2.2rem;">No fim, o objetivo é sempre o mesmo: tirar o trabalho braçal do caminho e ajudar o cliente a vender mais.</p>
-          </section>
-        </article>
-      </div>
-    </section>
-  </div>
+  
 
   <!-- ======================================================= -->
   <!-- VIEW: ARTIGO — Vendas na Prática                          -->
   <!-- ======================================================= -->
-  <div id="view-article-vendas" class="view" hidden>
-    <section class="band band-cream">
-      <div class="wrap">
-        <button type="button" class="article-back" data-view="edu"><span class="arrow">←</span> TÓDA Educação</button>
-        <div class="article-head">
-          <p class="kicker" style="margin-top:1.6rem;">Vendas na prática</p>
-          <h1 class="headline">O manual que separa quem bate meta de quem só tenta</h1>
-          <p class="lede article-lede">Um panorama para quem vive de vender: os termos que mais aparecem, o processo de venda consultiva, qualificação, cadência, contorno de objeções, leitura de métricas e a rotina de gestão que sustenta tudo isso.</p>
-        </div>
-        <nav class="article-subnav">
-          <a class="chip" href="#glossario">Glossário</a>
-          <a class="chip" href="#vc-processo">Venda consultiva</a>
-          <a class="chip" href="#vc-qualificacao">Qualificação</a>
-          <a class="chip" href="#vc-funil">Funil &amp; cadência</a>
-          <a class="chip" href="#vc-objecoes">Objeções</a>
-          <a class="chip" href="#vc-metricas">Métricas</a>
-          <a class="chip" href="#vc-rituais">Rituais</a>
-        </nav>
-
-        <article>
-          <section id="glossario" class="article-section">
-            <p class="kicker">Glossário rápido</p>
-            <h2>Antes de entrar no conteúdo</h2>
-            <p class="lede">Os termos que mais aparecem, explicados de um jeito simples. Se travar em alguma palavra ao longo da página, volte aqui.</p>
-            <div class="glossary-grid">
-              <div class="gloss-item"><div class="gloss-term">Funil</div><div class="gloss-def">O caminho que o cliente percorre até comprar: do primeiro contato até fechar.</div></div>
-              <div class="gloss-item"><div class="gloss-term">Lead</div><div class="gloss-def">Uma pessoa interessada, um possível cliente que ainda não comprou.</div></div>
-              <div class="gloss-item"><div class="gloss-term">Cadência</div><div class="gloss-def">A sequência combinada de tentativas de contato (ligação, WhatsApp, áudio) ao longo dos dias.</div></div>
-              <div class="gloss-item"><div class="gloss-term">Follow-up</div><div class="gloss-def">Voltar a falar com o lead para dar seguimento e não deixar ele esfriar.</div></div>
-              <div class="gloss-item"><div class="gloss-term">No-show</div><div class="gloss-def">Quando a pessoa marca uma reunião e não aparece.</div></div>
-              <div class="gloss-item"><div class="gloss-term">Hit rate</div><div class="gloss-def">De cada 10 ligações, quantas são atendidas.</div></div>
-              <div class="gloss-item"><div class="gloss-term">MQL × SQL</div><div class="gloss-def">MQL tem o perfil certo. SQL tem perfil, dor e condição de comprar (pronto para vender).</div></div>
-              <div class="gloss-item"><div class="gloss-term">SPIN</div><div class="gloss-def">Um método de perguntas (Situação, Problema, Implicação, Necessidade) para descobrir a dor do cliente.</div></div>
-              <div class="gloss-item"><div class="gloss-term">CAC</div><div class="gloss-def">Quanto custa, em média, conquistar um cliente novo.</div></div>
-              <div class="gloss-item"><div class="gloss-term">LTV</div><div class="gloss-def">Quanto um cliente gera de receita no total, enquanto fica com a gente.</div></div>
-              <div class="gloss-item"><div class="gloss-term">Churn</div><div class="gloss-def">A porcentagem de clientes que cancelam num período.</div></div>
-              <div class="gloss-item"><div class="gloss-term">Upsell / cross-sell</div><div class="gloss-def">Vender mais para quem já é cliente: um upgrade (upsell) ou um produto complementar (cross-sell).</div></div>
-              <div class="gloss-item"><div class="gloss-term">Health score</div><div class="gloss-def">Uma nota de saúde do cliente: mostra se ele está usando o produto e tendo resultado.</div></div>
-              <div class="gloss-item"><div class="gloss-term">TTV (time-to-value)</div><div class="gloss-def">O tempo até o cliente ter o primeiro resultado, o "momento uau".</div></div>
-            </div>
-          </section>
-
-          <section id="vc-processo" class="article-section">
-            <p class="kicker">1 · Venda consultiva</p>
-            <h2>Perguntar mais do que falar</h2>
-            <p class="lede">Vender não é um dom: é um processo que dá para repetir e medir. O erro mais comum é o vendedor que passa a reunião inteira falando do produto. Hoje o cliente já acha a informação na internet; o que faz diferença é a pergunta que você faz, não a apresentação que você dá.</p>
-
-            <div class="article-sub">
-              <h4>Princípios-chave</h4>
-              <div class="checklist" style="margin-top:1rem;">
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Vender é ajudar. Ninguém liga pro produto: o cliente só quer resolver o problema dele. Vende-se a transformação, do ponto A ao ponto B.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Separe dor, fato e solução. O fato é objetivo; a dor é o que dói; o produto é a solução. Fale da dor, não do fato.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Fala equilibrada: os melhores vendedores falam cerca de 50 a 54% da conversa. É diálogo, não monólogo.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Linguagem colaborativa: trocar "eu" por "nosso time" ou "nossos clientes" aumenta as chances de sucesso.</p></div>
-                <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Descubra de 3 a 4 problemas fazendo entre 11 e 14 perguntas abertas ao longo do processo.</p></div>
-              </div>
-              <p class="pull">"O bom vendedor não é o que sabe mais: é o que sabe perguntar."</p>
-            </div>
-
-            <div class="article-sub">
-              <h4>A jornada do cliente (confiança × tempo)</h4>
-              <div class="flow cols-3" style="grid-template-columns:repeat(4,1fr);">
-                <div class="flow-node"><div class="flow-icon">0</div><h4>Desconhecido</h4><p>Não sabe que tem o problema.</p></div>
-                <div class="flow-node"><div class="flow-icon">1</div><h4>Descoberta</h4><p>Identifica o problema. Vale relacionamento e necessidade; não fale de produto ainda.</p></div>
-                <div class="flow-node"><div class="flow-icon">2</div><h4>Avaliação</h4><p>Aí sim: produto, diferenciais e cases.</p></div>
-                <div class="flow-node"><div class="flow-icon">3</div><h4>Decisão</h4><p>O vale da morte: o cliente pesa risco contra preço. Cuidado com desconto agressivo.</p></div>
-              </div>
-            </div>
-          </section>
-
-          <section id="vc-qualificacao" class="article-section">
-            <p class="kicker">2 · Qualificação</p>
-            <h2>Descobrir a dor certa</h2>
-            <p class="lede">Qualificar é, na prática, descobrir e anotar a dor do cliente. Regra de ouro: se ele não falou nenhuma dor, o agendamento ainda não está qualificado, você não sabe por que ele compraria.</p>
-
-            <div class="article-sub">
-              <h4>SPIN Selling</h4>
-              <p class="note">Situação, Problema, Implicação e Necessidade. Use como mapa com rotas, não como trilho: o ser humano não é linear.</p>
-            </div>
-
-            <div class="compare-2">
-              <div class="compare-card"><span class="who">MQL</span><p class="quote">Tem o perfil e o pré-requisito certo.</p></div>
-              <span class="vs">×</span>
-              <div class="compare-card"><span class="who">SQL</span><p class="quote">Perfil, dor e capacidade de investir: oportunidade quente.</p></div>
-            </div>
-
-            <div class="article-sub">
-              <h4>Os 3 tipos de necessidade</h4>
-              <p class="note">Definem o esforço consultivo que a conversa vai exigir.</p>
-              <div class="service-grid cols-3">
-                <div class="service"><span class="tag">Mais fácil</span><h3>Ativa</h3><p class="desc">Sabe o problema e a solução, já decidiu comprar. É quem levantou a mão.</p></div>
-                <div class="service"><span class="tag">Consultivo</span><h3>Latente</h3><p class="desc">Sabe do problema, mas acha que a solução custa demais e não prioriza. Exige discurso consultivo.</p></div>
-                <div class="service"><span class="tag">Mais consultivo</span><h3>Nativa / oculta</h3><p class="desc">Não acha que tem problema. Exige educar e alertar antes de vender.</p></div>
-              </div>
-            </div>
-            <p class="pull">O percentual de impacto move a compra: uma dor leve nas costas não faz a pessoa agir; uma dor que trava, resolve na hora. Torne a implicação concreta.</p>
-          </section>
-
-          <section id="vc-funil" class="article-section">
-            <p class="kicker">3 · Funil, cadência e follow-up</p>
-            <h2>Responder rápido, insistir com educação</h2>
-            <p class="lede">Depois de qualificar, é hora de conduzir o lead até a venda com constância. Duas ideias simples guiam tudo: responder rápido e insistir com educação, a maioria desiste cedo demais. E quando alguém marca e não aparece, quase sempre a causa está lá atrás, na qualificação, não no dia da reunião.</p>
-
-            <div class="stat-tiles">
-              <div class="stat-tile"><div class="stat-num">&lt;5 min</div><div class="stat-label">Responder nesse prazo pode multiplicar a conversão em até 9×</div></div>
-              <div class="stat-tile"><div class="stat-num">16 a 18</div><div class="stat-label">Tentativas médias para conectar com um lead (a média no Brasil fica perto de 5)</div></div>
-              <div class="stat-tile"><div class="stat-num">D+1 a D+3</div><div class="stat-label">Quanto mais perto a reunião é marcada, menor o no-show</div></div>
-              <div class="stat-tile"><div class="stat-num">~40%</div><div class="stat-label">Hit rate bom em ligação (3 a 4 atendem a cada 10)</div></div>
-            </div>
-            <p class="note" style="margin-top:1.4rem;color:var(--muted-cream);">Ligação é o canal rei, o de maior conversão. Os outros canais servem para chamar a pessoa para a ligação.</p>
-
-            <div class="article-sub">
-              <h4>Cadência-exemplo</h4>
-              <p class="note">3 ligações mais 1 áudio, depois 3 ligações mais 1 texto, depois 3 ligações mais 1 vídeo, e por fim Instagram.</p>
-            </div>
-            <div class="article-sub">
-              <h4>Regra D+</h4>
-              <p class="note">D+1 fica perto de 10% de no-show, D+2 perto de 20%, D+3 perto de 30%. Agende o mais próximo possível.</p>
-            </div>
-            <div class="article-sub">
-              <h4>Follow-up</h4>
-              <p class="note">É sobre a dor, não sobre perguntar "e aí, fechou?". Relembre, traga um case, gere curiosidade, confirme.</p>
-            </div>
-            <p class="pull">Toda negociação tem 3 saídas: follow-up com data marcada, fechado ou perdido. Para dar como perdido, é preciso ouvir o não; boa parte dos "vou comprar" não fecham. Status (ganho ou perdido) mede tempo médio; não é etapa do funil.</p>
-            <p class="note" style="margin-top:1.4rem;font-style:italic;">"A maioria não perde venda por falta de competência: perde por falta de atitude, ao parar no segundo follow-up."</p>
-          </section>
-
-          <section id="vc-objecoes" class="article-section">
-            <p class="kicker">4 · Contorno de objeções</p>
-            <h2>A primeira frase quase nunca é o motivo real</h2>
-            <p class="lede">Objeção é quando o cliente diz um "mas": "tá caro", "não tenho tempo", "vou pensar". Em vez de já se justificar, responda com uma pergunta para entender o que está por trás.</p>
-
-            <div class="flow cols-3" style="grid-template-columns:repeat(4,1fr);">
-              <div class="flow-node"><div class="flow-icon">01</div><h4>Compreender</h4><p>Acolher, sem confrontar nem falar mal do concorrente. "Já ouvi isso, e resolvemos."</p></div>
-              <div class="flow-node"><div class="flow-icon">02</div><h4>Questionar</h4><p>"Fora esse ponto, você curtiu a proposta?" isola o que realmente trava.</p></div>
-              <div class="flow-node"><div class="flow-icon">03</div><h4>Isolar</h4><p>"Tirando esses dois pontos, a gente consegue avançar?" Contornar, não "quebrar".</p></div>
-              <div class="flow-node"><div class="flow-icon">04</div><h4>Pedir a venda</h4><p>Depois de isolar, seguir para o fechamento e pedir explicitamente.</p></div>
-            </div>
-
-            <p class="pull" style="margin-top:2rem;">Jogo do futuro: "Se não for com a gente, como você resolve isso nos próximos 3 a 6 meses?" A motivação tem que ser maior que o medo de ficar parado.</p>
-
-            <div class="checklist" style="margin-top:1.4rem;">
-              <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Tempo não existe, existe priorização; em preço, cheque se é falta de recurso ou de valor percebido.</p></div>
-              <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Concorrência: nunca desqualifique; enalteça o próprio diferencial (entrega, previsibilidade, relacionamento).</p></div>
-              <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Desconto na fase de decisão aumenta a percepção de risco; se der, posicione como "é só isso que falta para virar case".</p></div>
-              <div class="check-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.3l2.6 2.6L16.2 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:'Manrope',sans-serif;font-weight:500;font-size:0.95rem;">Treine com role-play as objeções conhecidas, para reconhecê-las quando chegarem.</p></div>
-            </div>
-          </section>
-
-          <section id="vc-metricas" class="article-section">
-            <p class="kicker">5 · Métricas e leitura de dados</p>
-            <h2>Número sem leitura não serve para nada</h2>
-            <p class="lede">Existem dois tipos de número: os de esforço, que a pessoa controla (ligações feitas, tempo de fala, follow-ups), e os de resultado, consequência dos primeiros (vendas, conversão, receita). Cobra-se o esforço, porque é ele que, feito todo dia, gera o resultado.</p>
-
-            <div class="article-sub">
-              <h4>Framework para todo indicador ruim</h4>
-              <div class="flow cols-3">
-                <div class="flow-node"><div class="flow-icon">1</div><h4>O que diz</h4><p>Esse número, comparado ao mercado, é bom ou ruim?</p></div>
-                <div class="flow-node"><div class="flow-icon">2</div><h4>Causas</h4><p>Quais fatores estão gerando esse resultado?</p></div>
-                <div class="flow-node"><div class="flow-icon">3</div><h4>Ação</h4><p>Qual ação executar a partir disso?</p></div>
-              </div>
-              <p class="note" style="margin-top:1.2rem;">Exemplo: no-show alto tem causa na qualificação fraca; a ação é melhorar a cadência de confirmação, os critérios de agendamento e treinar as ligações com role-play.</p>
-            </div>
-
-            <div class="table-scroll">
-              <table class="data-table">
-                <thead><tr><th>Indicador</th><th>Referência saudável</th></tr></thead>
-                <tbody>
-                  <tr><td>Tempo de resposta</td><td>menos de 5 min é bom, mais de 30 min é crítico</td></tr>
-                  <tr><td>No-show</td><td>15 a 20% em operações menores, até 25% em grandes, acima disso é sinal de gap</td></tr>
-                  <tr><td>Conversão lead para venda</td><td>menos de 10% é ruim, 20 a 25% é boa</td></tr>
-                  <tr><td>LTV / CAC</td><td>3:1 ou mais (nunca olhar o CAC isolado)</td></tr>
-                  <tr><td>Churn mensal</td><td>2 a 4% é saudável; reduzir 1% pode quase dobrar o LTV em 24 meses</td></tr>
-                  <tr><td>Hit rate (ligação)</td><td>cerca de 40% é bom (3 a 4 atendem a cada 10)</td></tr>
-                  <tr><td>Retenção / CSAT</td><td>acima de 90% é excelente; reter costuma custar 3× menos que reconquistar</td></tr>
-                  <tr><td>Indicação</td><td>cerca de 4× mais conversão, +37% de retenção, CAC próximo de zero</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="pull">Combine quantitativo com qualitativo: o número sozinho dá uma visão míope; é preciso ouvir ligações e ler conversas. O resultado é sempre uma equação: perfil do cliente, perfil do vendedor e o que se fala.</p>
-          </section>
-
-          <section id="vc-rituais" class="article-section">
-            <p class="kicker">6 · Rituais e rotina de gestão</p>
-            <h2>Gestão não é evento, é rotina</h2>
-            <p class="lede">Sem rito, sem ritmo, sem venda. É a rotina que faz o processo virar execução consistente.</p>
-            <div class="service-grid cols-3">
-              <div class="service"><div class="service-icon">D</div><h3>Diário</h3><p class="desc">Check-in de 15 minutos: indicadores de esforço e no-show do dia anterior.</p></div>
-              <div class="service"><div class="service-icon">S</div><h3>Semanal</h3><p class="desc">Pipeline revisado com os closers, meta e realizado, ajuste de playbook.</p></div>
-              <div class="service"><div class="service-icon">M</div><h3>Mensal</h3><p class="desc">Revisão do funil, benchmark de mercado, recalibrar metas.</p></div>
-              <div class="service"><div class="service-icon">+</div><h3>Sempre</h3><p class="desc">Escuta de calls e role-play: testar antes de escalar.</p></div>
-            </div>
-          </section>
-        </article>
-      </div>
-    </section>
-  </div>
+  
 
 </div>
 
@@ -1595,8 +987,6 @@
       showView(el.getAttribute("data-view"), el.getAttribute("data-anchor"));
     });
   });
-
-  showView("toda");
 })();
 </script>
 
