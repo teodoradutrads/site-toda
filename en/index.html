@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TÓDA | Structure before scale. Sales operations, CRM and applied AI</title>
+<meta name="description" content="TÓDA turns a sales operation that grew on improvisation into a system you can measure, manage and scale. Sales process, CRM, data and applied AI, in that order.">
+<meta name="theme-color" content="#06110B">
+<link rel="canonical" href="https://todaeco.com/en/">
+<link rel="alternate" hreflang="pt-BR" href="https://todaeco.com/">
+<link rel="alternate" hreflang="en" href="https://todaeco.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://todaeco.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TÓDA | Structure before scale.">
+<meta property="og:description" content="Sales process, CRM, data and applied AI for businesses that already sell and need to scale. Process first. Then data. Then AI.">
+<meta property="og:url" content="https://todaeco.com/en/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306110B'/%3E%3Cg stroke='%23C3F53C' stroke-width='5' stroke-linecap='round'%3E%3Cline x1='12' y1='46' x2='30' y2='22'/%3E%3Cline x1='30' y1='22' x2='51' y2='33'/%3E%3C/g%3E%3Cg fill='%23C3F53C'%3E%3Ccircle cx='12' cy='46' r='6'/%3E%3Ccircle cx='30' cy='22' r='6'/%3E%3Ccircle cx='51' cy='33' r='6'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"TÓDA","url":"https://todaeco.com/en/","description":"Sales operation structuring: sales process design, CRM and data management, performance management, automation and applied AI.","founder":{"@type":"Person","name":"Teodora Dutra"},"areaServed":"Worldwide","knowsAbout":["Sales operations","CRM","Sales process","Revenue operations","Applied AI","WhatsApp sales"]}</script>
+<style>
+  :root{
+    --ink:#06110B; --forest:#0E2318; --forest-2:#143124;
+    --lime:#C3F53C; --paper:#F1EEE2; --paper-2:#E7E3D2;
+    --white:#F4F7EF;
+    --mut-d:rgba(244,247,239,.62); --mut-l:rgba(6,17,11,.62);
+    --line-d:rgba(244,247,239,.14); --line-l:rgba(6,17,11,.16);
+    --pad:clamp(1.25rem,5vw,5rem); --max:84rem;
+    --disp:'Sora',system-ui,sans-serif; --sans:'Manrope',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{background:var(--ink);color:var(--white);font-family:var(--sans);font-size:1.02rem;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
+  img,svg,canvas{display:block;max-width:100%;}
+  a{color:inherit;}
+  ::selection{background:var(--lime);color:var(--ink);}
+  :focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:4px;}
+  .paper :focus-visible{outline-color:var(--ink);}
+  .skip{position:absolute;left:-999px;top:0;background:var(--lime);color:var(--ink);padding:.7rem 1rem;z-index:200;font-weight:700;}
+  .skip:focus{left:1rem;top:1rem;}
+
+  /* ----- type ----- */
+  h1,h2,h3{font-family:var(--disp);font-weight:700;letter-spacing:-.045em;line-height:1;text-wrap:balance;}
+  .mono{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;}
+  .kick{display:flex;align-items:center;gap:.8rem;color:var(--mut-d);}
+  .kick::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 5px rgba(195,245,60,.14);}
+  .paper .kick{color:var(--mut-l);}
+  .paper .kick::before{background:var(--ink);box-shadow:0 0 0 5px rgba(6,17,11,.1);}
+  .h2{font-size:clamp(2.3rem,6vw,5.4rem);line-height:1.08;}
+  .lime{color:var(--lime);}
+
+  /* ----- signature: the route under the word ----- */
+  .rt{position:relative;display:inline-block;white-space:nowrap;}
+  .rt::after{content:"";position:absolute;left:.02em;right:.02em;bottom:-.1em;height:.055em;background:var(--lime);transform-origin:left;transform:scaleX(0);transition:transform 1.1s .25s var(--ease);}
+  .rt i{position:absolute;bottom:-.1em;width:.17em;height:.17em;margin-bottom:-.058em;border-radius:50%;background:var(--lime);transform:scale(0);transition:transform .5s var(--ease);}
+  .rt i:nth-child(1){left:-.04em;transition-delay:.3s;}
+  .rt i:nth-child(2){left:calc(42% - .085em);transition-delay:.7s;}
+  .rt i:nth-child(3){right:-.04em;transition-delay:1.1s;}
+  .in .rt::after,.rt.in::after{transform:scaleX(1);}
+  .in .rt i,.rt.in i{transform:scale(1);}
+  .paper .rt::after,.paper .rt i{background:var(--ink);}
+  .paper .rt i:nth-child(3){background:var(--lime);box-shadow:0 0 0 .06em var(--ink);}
+
+  /* ----- header ----- */
+  .hdr{position:fixed;inset:0 0 auto 0;z-index:80;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem var(--pad);transition:background .35s var(--ease),padding .35s var(--ease),border-color .35s;border-bottom:1px solid transparent;}
+  .hdr.on{background:rgba(6,17,11,.82);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-color:var(--line-d);padding-top:.75rem;padding-bottom:.75rem;}
+  .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;}
+  .logo svg{height:30px;width:auto;}
+  .links{display:flex;align-items:center;gap:clamp(1rem,2.6vw,2.2rem);}
+  .links a.t{color:var(--mut-d);text-decoration:none;transition:color .25s;}
+  .links a.t:hover{color:var(--white);}
+  .btn{display:inline-flex;align-items:center;gap:.7rem;font-weight:700;font-size:.92rem;text-decoration:none;padding:.95rem 1.5rem;border-radius:100px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s,color .3s;white-space:nowrap;}
+  .btn-lime{background:var(--lime);color:var(--ink);}
+  .btn-lime:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(195,245,60,.25);}
+  .btn-ghost{border:1px solid var(--line-d);color:var(--white);}
+  .btn-ghost:hover{border-color:var(--lime);color:var(--lime);}
+  .btn.sm{padding:.62rem 1.1rem;font-size:.82rem;}
+  .btn .ar{transition:transform .3s var(--ease);}
+  .btn:hover .ar{transform:translateX(4px);}
+  .lang{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;}
+  .lang a,.lang b{text-decoration:none;font-weight:500;}
+  .lang a{color:var(--mut-d);transition:color .25s;}
+  .lang a:hover{color:var(--white);}
+  .lang b{color:var(--lime);}
+  .lang span{color:rgba(244,247,239,.3);}
+  @media (max-width:820px){.links a.t{display:none;}.links{gap:.9rem;}}
+  @media (max-width:520px){.hdr{gap:.6rem;}.logo svg{height:24px;}.lang{gap:.35rem;font-size:.68rem;}.links .btn.sm{padding:.58rem .9rem;font-size:.78rem;gap:.4rem;}}
+
+  /* ----- rail (the page as a route) ----- */
+  .rail{position:fixed;left:clamp(.6rem,1.6vw,1.6rem);top:50%;transform:translateY(-50%);z-index:70;display:flex;flex-direction:column;gap:.95rem;}
+  .rail::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line-d);}
+  .rail a{position:relative;display:flex;align-items:center;gap:.9rem;height:11px;text-decoration:none;}
+  .rail a::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--ink);border:1.5px solid rgba(244,247,239,.38);transition:all .35s var(--ease);flex:none;}
+  .rail a span{opacity:0;transform:translateX(-6px);transition:all .3s var(--ease);color:var(--white);pointer-events:none;white-space:nowrap;}
+  .rail a:hover span{opacity:1;transform:none;}
+  .rail a.on::before{background:var(--lime);border-color:var(--lime);box-shadow:0 0 0 5px rgba(195,245,60,.18);}
+  .rail.onpaper a::before{background:var(--paper);border-color:rgba(6,17,11,.4);}
+  .rail.onpaper a.on::before{background:var(--lime);border-color:var(--ink);box-shadow:0 0 0 5px rgba(6,17,11,.12);}
+  .rail.onpaper::before{background:var(--line-l);}
+  .rail.onpaper a span{color:var(--ink);}
+  @media (max-width:1180px){.rail{display:none;}}
+
+  /* ----- layout ----- */
+  section{position:relative;padding:clamp(5.5rem,12vw,10rem) var(--pad);}
+  .wrap{max-width:var(--max);margin:0 auto;position:relative;z-index:2;}
+  .paper{background:var(--paper);color:var(--ink);}
+  .dark{background:var(--ink);}
+  .forest{background:var(--forest);}
+  .lede{font-size:clamp(1.05rem,1.4vw,1.25rem);color:var(--mut-d);max-width:38rem;}
+  .paper .lede{color:var(--mut-l);}
+
+  /* ----- hero ----- */
+  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:9rem;padding-bottom:7.5rem;overflow:hidden;
+    background:radial-gradient(60rem 38rem at 85% 70%,rgba(195,245,60,.07),transparent 60%),var(--ink);}
+  #flow{position:absolute;inset:0;width:100%;height:100%;z-index:1;}
+  .hero .wrap{width:100%;pointer-events:none;}
+  .hero .wrap > *{pointer-events:auto;}
+  .hero h1{font-size:clamp(3.4rem,11.6vw,10.6rem);line-height:.9;letter-spacing:-.06em;margin-top:2rem;font-weight:700;}
+  .hero .lede{margin-top:2.4rem;}
+  .hero-act{margin-top:2.6rem;display:flex;flex-wrap:wrap;gap:1rem;}
+  .hero-foot{position:absolute;left:0;right:0;bottom:0;z-index:3;border-top:1px solid var(--line-d);padding:1.1rem var(--pad);}
+  .hero-foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem;color:var(--mut-d);}
+  .hero-foot .wrap span:not(:first-child){color:rgba(244,247,239,.4);}
+
+  /* ----- 01 beliefs ----- */
+  .bel{margin-top:4rem;list-style:none;}
+  .bel li{display:grid;grid-template-columns:4rem 1fr;gap:1rem;align-items:baseline;padding:2.1rem 0;border-top:1px solid var(--line-l);}
+  .bel li:last-child{border-bottom:1px solid var(--line-l);}
+  .bel .n{font-family:var(--mono);font-size:.8rem;color:var(--mut-l);}
+  .bel p{font-family:var(--disp);font-weight:600;letter-spacing:-.04em;line-height:1.04;font-size:clamp(1.7rem,4.2vw,3.9rem);max-width:22ch;}
+  .after{margin-top:3.2rem;display:flex;flex-wrap:wrap;gap:1rem 3rem;align-items:center;justify-content:space-between;}
+  .after p{max-width:34rem;color:var(--mut-l);font-size:1.1rem;}
+
+  /* ----- 02 manifesto ----- */
+  .man{background:var(--forest);}
+  .man-l{margin-top:3.4rem;list-style:none;}
+  .man-l li{font-family:var(--disp);font-weight:700;letter-spacing:-.055em;line-height:1;font-size:clamp(2.1rem,7.4vw,7.2rem);padding:.28em 0;border-bottom:1px solid var(--line-d);color:rgba(244,247,239,.3);transition:color .6s var(--ease);}
+  .man-l li b{font-weight:700;color:inherit;}
+  .man-l li.lit{color:var(--white);}
+  .man-l li.lit b{color:var(--lime);}
+  .man-l li:last-child{border-bottom:none;color:var(--mut-d);font-size:clamp(1.4rem,3.2vw,2.6rem);}
+  .man-note{margin-top:2.4rem;color:var(--mut-d);}
+
+  /* ----- 03 services ----- */
+  .svc{margin-top:4rem;list-style:none;border-top:1px solid var(--line-l);}
+  .svc li{position:relative;display:grid;grid-template-columns:4rem minmax(0,1.1fr) minmax(0,1fr);gap:.4rem 2.4rem;align-items:baseline;padding:2.3rem 1.2rem 2.3rem 0;border-bottom:1px solid var(--line-l);transition:background .4s var(--ease),color .4s var(--ease),padding .4s var(--ease);}
+  .svc li:hover{background:var(--ink);color:var(--white);padding-left:1.4rem;}
+  .svc .n{font-family:var(--mono);font-size:.8rem;color:var(--mut-l);}
+  .svc li:hover .n{color:var(--lime);}
+  .svc h3{font-size:clamp(1.4rem,2.6vw,2.2rem);letter-spacing:-.04em;line-height:1.05;}
+  .svc p{color:var(--mut-l);max-width:30rem;}
+  .svc li:hover p{color:var(--mut-d);}
+  @media (max-width:860px){.svc li{grid-template-columns:2.4rem 1fr;}.svc p{grid-column:2;}}
+
+  /* ----- 04 method ----- */
+  .steps{margin-top:5rem;display:grid;grid-template-columns:repeat(4,1fr);position:relative;list-style:none;}
+  .steps::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line-d);}
+  .steps::after{content:"";position:absolute;left:0;top:9px;height:1px;width:0;background:var(--lime);transition:width 1.8s var(--ease);}
+  .steps.in::after{width:100%;}
+  .step{position:relative;padding:3rem 1.6rem 0 0;}
+  .step::before{content:"";position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:var(--forest);border:2px solid var(--lime);z-index:2;}
+  .step:last-child::before{background:var(--lime);box-shadow:0 0 0 8px rgba(195,245,60,.16);}
+  .step .n{font-family:var(--mono);font-size:.78rem;color:var(--lime);}
+  .step h3{font-size:clamp(1.5rem,2.4vw,2.1rem);margin-top:.9rem;}
+  .step p{margin-top:.9rem;color:var(--mut-d);max-width:17rem;}
+  @media (max-width:900px){.steps{grid-template-columns:1fr;gap:3rem;margin-top:3.5rem;}.steps::before{left:9px;right:auto;top:0;bottom:0;width:1px;height:auto;}.steps::after{display:none;}.step{padding:0 0 0 3.2rem;}.step::before{top:.2rem;}}
+
+  /* ----- AI band ----- */
+  .ai{background:var(--ink);padding-block:clamp(4rem,8vw,7rem);border-top:1px solid var(--line-d);}
+  .ai h2{font-size:clamp(2rem,5.2vw,4.8rem);max-width:16ch;}
+  .chain{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 0;margin-top:2.6rem;list-style:none;}
+  .chain li{font-family:var(--mono);font-weight:500;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:.8rem 1.3rem;border:1px solid var(--line-d);border-radius:100px;}
+  .chain li.on{background:var(--lime);color:var(--ink);border-color:var(--lime);font-weight:700;}
+  .chain li.sep{border:none;padding:0 .8rem;color:var(--lime);}
+  .ai-note{margin-top:2rem;color:var(--mut-d);}
+
+  /* ----- 05 who ----- */
+  .who-grid{margin-top:4rem;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,6rem);align-items:start;}
+  .who{list-style:none;}
+  .who li{display:grid;grid-template-columns:1.2rem 1fr;gap:1rem;padding:1.15rem 0;border-top:1px solid var(--line-l);font-weight:600;font-size:1.08rem;line-height:1.4;}
+  .who li:last-child{border-bottom:1px solid var(--line-l);}
+  .who li::before{content:"";width:8px;height:8px;margin-top:.5em;background:var(--ink);border-radius:50%;}
+  .seg{padding:2rem;background:var(--ink);color:var(--white);border-radius:6px;}
+  .seg h3{font-size:clamp(1.5rem,2.4vw,2rem);margin-top:1.2rem;}
+  .seg ul{list-style:none;margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem;}
+  .seg li{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1rem;border:1px solid var(--line-d);border-radius:100px;}
+  .seg p{margin-top:1.6rem;color:var(--mut-d);font-size:.98rem;}
+  @media (max-width:900px){.who-grid{grid-template-columns:1fr;}}
+
+  /* ----- 06 diagnostic ----- */
+  .dx-grid{margin-top:4rem;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,6rem);align-items:start;}
+  .dx{list-style:none;}
+  .dx li{border-top:1px solid var(--line-d);}
+  .dx li:last-child{border-bottom:1px solid var(--line-d);}
+  .dx label{display:grid;grid-template-columns:2.2rem 1fr;gap:1rem;align-items:center;padding:1.2rem 0;cursor:pointer;font-family:var(--disp);font-weight:600;letter-spacing:-.025em;font-size:clamp(1.1rem,1.8vw,1.45rem);line-height:1.25;transition:color .3s;color:var(--mut-d);}
+  .dx label:hover{color:var(--white);}
+  .dx input{position:absolute;opacity:0;pointer-events:none;}
+  .dx .box{width:22px;height:22px;border:1.5px solid rgba(244,247,239,.4);border-radius:5px;display:grid;place-items:center;transition:all .25s var(--ease);}
+  .dx .box svg{width:13px;height:13px;stroke:var(--ink);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:20;stroke-dashoffset:20;transition:stroke-dashoffset .3s var(--ease);}
+  .dx input:checked + label,.dx label:has(input:checked){color:var(--white);}
+  .dx input:checked ~ label .box{background:var(--lime);border-color:var(--lime);}
+  .dx li.on label{color:var(--white);}
+  .dx li.on .box{background:var(--lime);border-color:var(--lime);}
+  .dx li.on .box svg{stroke-dashoffset:0;}
+  .dx input:focus-visible + .box{outline:2px solid var(--lime);outline-offset:3px;}
+  .score{position:sticky;top:7rem;padding:2.2rem;border:1px solid var(--line-d);border-radius:6px;background:var(--forest);}
+  .score .big{font-family:var(--disp);font-weight:700;letter-spacing:-.06em;line-height:.9;font-size:clamp(4rem,9vw,7.5rem);margin-top:1.4rem;}
+  .score .big small{font-size:.35em;color:var(--mut-d);letter-spacing:-.03em;margin-left:.15em;}
+  .bar{height:3px;background:var(--line-d);margin-top:1.4rem;border-radius:3px;overflow:hidden;}
+  .bar i{display:block;height:100%;width:0;background:var(--lime);transition:width .5s var(--ease);}
+  .score p.msg{margin-top:1.6rem;font-family:var(--disp);font-weight:600;letter-spacing:-.03em;font-size:1.35rem;line-height:1.2;min-height:3.4rem;}
+  .score .btn{margin-top:1.6rem;}
+  @media (max-width:900px){.dx-grid{grid-template-columns:1fr;}.score{position:static;}}
+
+  /* ----- 07 about ----- */
+  .about{margin-top:4rem;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(2.5rem,6vw,6rem);align-items:start;}
+  .about .lede + .lede{margin-top:1.2rem;}
+  .xp{margin-top:2.4rem;list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;}
+  .xp li{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:.55rem .9rem;border:1px solid var(--line-l);border-radius:100px;}
+  .person{padding:1.8rem;border:1px solid var(--line-l);border-radius:6px;display:flex;flex-direction:column;gap:1.2rem;}
+  .person img{width:112px;height:112px;border-radius:50%;object-fit:cover;filter:grayscale(1) contrast(1.05);box-shadow:0 0 0 3px var(--paper),0 0 0 5px var(--ink);}
+  .person .nm{font-family:var(--disp);font-weight:700;letter-spacing:-.04em;font-size:1.5rem;line-height:1.05;}
+  .person .rl{margin-top:.5rem;color:var(--mut-l);}
+  .person .bd{display:inline-flex;align-items:center;gap:.6rem;font-size:.85rem;font-weight:600;}
+  .person .bd i{width:7px;height:7px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px rgba(6,17,11,.12);}
+  @media (max-width:900px){.about{grid-template-columns:1fr;}}
+
+  /* ----- cta ----- */
+  .cta{text-align:center;overflow:hidden;padding-block:clamp(6.5rem,14vw,12rem);}
+  .cta::after{content:"tóda";position:absolute;left:0;right:0;bottom:-.22em;text-align:center;font-family:var(--disp);font-weight:700;letter-spacing:-.07em;line-height:1;font-size:clamp(9rem,34vw,32rem);color:rgba(244,247,239,.035);pointer-events:none;z-index:0;}
+  .cta h2{font-size:clamp(2.6rem,8vw,7.4rem);max-width:13ch;margin:0 auto;letter-spacing:-.055em;line-height:.94;}
+  .cta .lede{margin:2rem auto 0;}
+  .cta .btn{margin-top:2.6rem;}
+  .cta .nt{margin-top:1.4rem;color:var(--mut-d);font-size:.88rem;}
+
+  /* ----- reveal ----- */
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s);}
+  .rv.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.rv{opacity:1;transform:none;transition:none;}.rt::after{transform:scaleX(1);transition:none;}.rt i{transform:scale(1);transition:none;}.steps::after{width:100%;transition:none;}.man-l li{color:var(--white);}.man-l li b{color:var(--lime);}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <a class="logo" href="#top" aria-label="TÓDA home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 403.02 134.40" role="img" aria-label="tóda"><title>tóda</title>
+<g fill="none" stroke="#C3F53C" stroke-width="9.608" stroke-linecap="round" stroke-linejoin="round"><polyline points="36.73,101.96 71.32,55.84 111.67,76.98"/></g>
+<g fill="#C3F53C"><circle cx="36.73" cy="101.96" r="11.529"/><circle cx="71.32" cy="55.84" r="11.529"/><circle cx="111.67" cy="76.98" r="11.529"/></g>
+<g transform="translate(151.945 107.250)">
+<g fill="#FFFFFF"><path d="M32.175000000000004 0.75Q23.925 0.75 18.825000000000003 -1.3250000000000002Q13.725000000000001 -3.4000000000000004 11.337500000000002 -8.2625Q8.950000000000001 -13.125 8.950000000000001 -21.425L9.025 -69.60000000000001H23.925L23.85 -20.75Q23.85 -16.900000000000002 25.900000000000002 -14.850000000000001Q27.950000000000003 -12.8 31.8 -12.8H39.85V0.75ZM0.65 -43.050000000000004V-54.75H39.85V-43.050000000000004Z"/><path d="M74.42500000000001 1.9500000000000002Q67.2 1.9500000000000002 61.60000000000001 -0.30000000000000004Q56.00000000000001 -2.5500000000000003 52.12500000000001 -6.4625Q48.25000000000001 -10.375 46.25000000000001 -15.425Q44.25000000000001 -20.475 44.25000000000001 -26.1V-28.35Q44.25000000000001 -34.125 46.337500000000006 -39.2625Q48.425000000000004 -44.400000000000006 52.35000000000001 -48.3125Q56.275000000000006 -52.225 61.87500000000001 -54.462500000000006Q67.47500000000001 -56.7 74.42500000000001 -56.7Q81.45000000000002 -56.7 87.01250000000002 -54.462500000000006Q92.57500000000002 -52.225 96.50000000000001 -48.3125Q100.42500000000001 -44.400000000000006 102.51250000000002 -39.2625Q104.60000000000001 -34.125 104.60000000000001 -28.35V-26.1Q104.60000000000001 -20.475 102.60000000000001 -15.425Q100.60000000000001 -10.375 96.72500000000001 -6.4625Q92.85000000000001 -2.5500000000000003 87.25 -0.30000000000000004Q81.65 1.9500000000000002 74.42500000000001 1.9500000000000002ZM74.42500000000001 -11.600000000000001Q79.07500000000002 -11.600000000000001 82.20000000000002 -13.6125Q85.32500000000002 -15.625 86.93750000000001 -19.1875Q88.55000000000001 -22.75 88.55000000000001 -27.225Q88.55000000000001 -31.875 86.88750000000002 -35.4375Q85.22500000000001 -39.0 82.0625 -41.075Q78.9 -43.150000000000006 74.42500000000001 -43.150000000000006Q69.97500000000001 -43.150000000000006 66.80000000000001 -41.075Q63.62500000000001 -39.0 61.962500000000006 -35.4375Q60.30000000000001 -31.875 60.30000000000001 -27.225Q60.30000000000001 -22.75 61.91250000000001 -19.1875Q63.525000000000006 -15.625 66.6875 -13.6125Q69.85000000000001 -11.600000000000001 74.42500000000001 -11.600000000000001Z"/><path d="M135.35000000000002 1.8Q129.57500000000002 1.8 124.81250000000001 -0.30000000000000016Q120.05000000000001 -2.4000000000000004 116.57500000000002 -6.1625000000000005Q113.10000000000001 -9.925 111.22500000000001 -15.000000000000002Q109.35000000000001 -20.075000000000003 109.35000000000001 -26.025000000000002V-28.275000000000002Q109.35000000000001 -34.2 111.13750000000002 -39.3125Q112.92500000000001 -44.425000000000004 116.26250000000002 -48.2625Q119.60000000000002 -52.1 124.31250000000001 -54.25Q129.025 -56.400000000000006 134.82500000000002 -56.400000000000006Q141.375 -56.400000000000006 146.1875 -53.550000000000004Q151.0 -50.7 153.7125 -45.150000000000006Q156.425 -39.6 156.675 -31.450000000000003L152.52500000000003 -35.375V-73.0H168.57500000000002V0.0H155.875V-22.725H158.07500000000002Q157.82500000000002 -14.9 154.875 -9.4Q151.925 -3.9000000000000004 146.925 -1.0500000000000003Q141.925 1.8 135.35000000000002 1.8ZM139.35000000000002 -11.55Q143.05 -11.55 146.1125 -13.225000000000001Q149.175 -14.9 151.05 -18.1125Q152.925 -21.325000000000003 152.925 -25.8V-29.5Q152.925 -33.875 151.0 -36.8625Q149.07500000000002 -39.85 146.0 -41.45Q142.925 -43.050000000000004 139.32500000000002 -43.050000000000004Q135.3 -43.050000000000004 132.15 -41.03750000000001Q129.0 -39.025000000000006 127.20000000000002 -35.462500000000006Q125.40000000000002 -31.900000000000002 125.40000000000002 -27.150000000000002Q125.40000000000002 -22.400000000000002 127.2125 -18.900000000000002Q129.025 -15.4 132.1875 -13.475000000000001Q135.35000000000002 -11.55 139.35000000000002 -11.55Z"/><path d="M213.175 0.0V-16.150000000000002H210.525V-33.75Q210.525 -37.975 208.5 -40.0625Q206.47500000000002 -42.150000000000006 202.10000000000002 -42.150000000000006Q199.9 -42.150000000000006 196.3 -42.050000000000004Q192.70000000000002 -41.95 188.875 -41.775000000000006Q185.05 -41.6 181.95000000000002 -41.400000000000006V-54.900000000000006Q184.3 -55.1 187.38750000000002 -55.2875Q190.47500000000002 -55.475 193.78750000000002 -55.5625Q197.10000000000002 -55.650000000000006 199.95000000000002 -55.650000000000006Q208.375 -55.650000000000006 214.1375 -53.28750000000001Q219.9 -50.925000000000004 222.8875 -46.075Q225.875 -41.225 225.875 -33.575V0.0ZM195.675 1.4000000000000001Q189.82500000000002 1.4000000000000001 185.3625 -0.6875000000000001Q180.9 -2.7750000000000004 178.4 -6.7125Q175.9 -10.65 175.9 -16.150000000000002Q175.9 -22.225 179.0125 -26.0625Q182.125 -29.900000000000002 187.7 -31.737500000000004Q193.275 -33.575 200.625 -33.575H212.275V-24.725H200.525Q196.3 -24.725 194.025 -22.637500000000003Q191.75 -20.55 191.75 -17.125Q191.75 -13.775 194.025 -11.7125Q196.3 -9.65 200.525 -9.65Q203.175 -9.65 205.3375 -10.600000000000001Q207.5 -11.55 208.91250000000002 -13.8625Q210.32500000000002 -16.175 210.525 -20.25L214.32500000000002 -16.3Q213.82500000000002 -10.600000000000001 211.57500000000002 -6.675000000000001Q209.32500000000002 -2.75 205.375 -0.6749999999999999Q201.425 1.4000000000000001 195.675 1.4000000000000001Z"/></g>
+<g fill="#C3F53C"><path d="M66.525 -61.2 75.47500000000001 -82.05000000000001H91.95L80.47500000000001 -61.2Z"/></g>
+</g>
+</svg></a>
+  <nav class="links mono" aria-label="Main">
+    <a class="t" href="#services">Services</a>
+    <a class="t" href="#method">Method</a>
+    <a class="t" href="#diagnostic">Diagnostic</a>
+    <a class="t" href="#about">About</a>
+    <span class="lang" role="group" aria-label="Language"><a href="/" hreflang="pt-BR" lang="pt-BR">PT</a><span aria-hidden="true">|</span><b aria-current="true" lang="en">EN</b></span>
+    <a class="btn btn-lime sm wa" href="#" target="_blank" rel="noopener">Book a diagnostic <span class="ar" aria-hidden="true">→</span></a>
+  </nav>
+</header>
+
+<nav class="rail mono" id="rail" aria-label="Page sections">
+  <a href="#top" data-s="top"><span>Start</span></a>
+  <a href="#problem" data-s="problem"><span>01 Problem</span></a>
+  <a href="#manifesto" data-s="manifesto"><span>02 Manifesto</span></a>
+  <a href="#services" data-s="services"><span>03 Services</span></a>
+  <a href="#method" data-s="method"><span>04 Method</span></a>
+  <a href="#who" data-s="who"><span>05 Who it's for</span></a>
+  <a href="#diagnostic" data-s="diagnostic"><span>06 Diagnostic</span></a>
+  <a href="#about" data-s="about"><span>07 About</span></a>
+  <a href="#contact" data-s="contact"><span>Contact</span></a>
+</nav>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero dark" id="top" data-theme="dark">
+  <canvas id="flow" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick mono rv">Sales operations · Process · Data · AI</p>
+    <h1 class="rv" style="--d:.08s">Structure<br>before <span class="rt">scale.<i></i><i></i><i></i></span></h1>
+    <p class="lede rv" style="--d:.16s">TÓDA turns a sales operation that grew on improvisation into a system you can measure, manage and scale. Process first. Then data. Then AI.</p>
+    <div class="hero-act rv" style="--d:.24s">
+      <a class="btn btn-lime wa" href="#" target="_blank" rel="noopener">Book a free diagnostic <span class="ar" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="#method">How we work</a>
+    </div>
+  </div>
+  <div class="hero-foot mono"><div class="wrap"><span>Process</span><span>Sales</span><span>Data</span><span>Performance</span><span>AI</span></div></div>
+</section>
+
+<!-- 01 PROBLEM -->
+<section class="paper" id="problem" data-theme="paper">
+  <div class="wrap">
+    <p class="kick mono rv">01 · The problem</p>
+    <h2 class="h2 rv" style="margin-top:1.6rem;max-width:14ch;--d:.06s">Growing without structure is <span class="rt">expensive.<i></i><i></i><i></i></span></h2>
+    <ol class="bel">
+      <li class="rv"><span class="n">01</span><p>More leads won't fix a disorganized sales process.</p></li>
+      <li class="rv"><span class="n">02</span><p>More salespeople won't fix an operation nobody manages.</p></li>
+      <li class="rv"><span class="n">03</span><p>More tools won't fix a missing process.</p></li>
+      <li class="rv"><span class="n">04</span><p>And AI without strategy is just one more technology in the mix.</p></li>
+    </ol>
+    <div class="after rv">
+      <p>TÓDA steps in to understand what happens between a lead arriving and revenue happening, and builds what's missing in between.</p>
+      <a class="btn btn-lime wa" href="#" target="_blank" rel="noopener" style="background:var(--ink);color:var(--paper)">See what needs to change <span class="ar" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 MANIFESTO -->
+<section class="man dark" id="manifesto" data-theme="dark">
+  <div class="wrap">
+    <p class="kick mono rv">02 · Manifesto</p>
+    <ul class="man-l">
+      <li>Every operation needs <b>process.</b></li>
+      <li>Every decision needs <b>data.</b></li>
+      <li>Every scale needs <b>structure.</b></li>
+      <li>Every AI needs <b>strategy.</b></li>
+      <li>Every sale leaves <b>data.</b></li>
+      <li>And we connect all of it.</li>
+    </ul>
+    <p class="man-note mono rv">TÓDA (TOH-dah) is Portuguese for “every”.</p>
+  </div>
+</section>
+
+<!-- 03 SERVICES -->
+<section class="paper" id="services" data-theme="paper">
+  <div class="wrap">
+    <p class="kick mono rv">03 · What we do</p>
+    <h2 class="h2 rv" style="margin-top:1.6rem;max-width:15ch;--d:.06s">We structure the operation behind <span class="rt">growth.<i></i><i></i><i></i></span></h2>
+    <ol class="svc">
+      <li class="rv"><span class="n">01</span><h3>Sales process design</h3><p>We map and structure the sales journey (stages, owners, rules and cadences) so the operation runs in a clear, repeatable way.</p></li>
+      <li class="rv"><span class="n">02</span><h3>Sales performance management</h3><p>A real view of the operation through KPIs, goals, performance tracking and the bottlenecks that cost you revenue.</p></li>
+      <li class="rv"><span class="n">03</span><h3>CRM &amp; data management</h3><p>We set up your CRM as a management tool, not just a place where sellers log information.</p></li>
+      <li class="rv"><span class="n">04</span><h3>Automation &amp; AI</h3><p>We find where automation and AI agents genuinely make sense and design how they work inside the sales journey.</p></li>
+      <li class="rv"><span class="n">05</span><h3>Operation management &amp; evolution</h3><p>We don't hand over a document and disappear. We follow the operation, analyze results and evolve the process as the data reveals new opportunities.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 04 METHOD -->
+<section class="forest" id="method" data-theme="dark">
+  <div class="wrap">
+    <p class="kick mono rv">04 · How we work</p>
+    <h2 class="h2 rv" style="margin-top:1.6rem;max-width:16ch;--d:.06s">Before proposing a solution, we <span class="rt">understand<i></i><i></i><i></i></span> the operation.</h2>
+    <ol class="steps rv">
+      <li class="step"><span class="n">01</span><h3>Diagnose</h3><p>We learn your operation, sales process, team, tools, data and goals.</p></li>
+      <li class="step"><span class="n">02</span><h3>Structure</h3><p>We design processes, owners, KPIs, automations and the operating architecture.</p></li>
+      <li class="step"><span class="n">03</span><h3>Implement</h3><p>We turn strategy into operation: CRM, processes, automations, AI, dashboards and management routines.</p></li>
+      <li class="step"><span class="n">04</span><h3>Manage &amp; evolve</h3><p>We track the data, find bottlenecks and keep improving the structure.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- AI BAND -->
+<section class="ai" data-theme="dark">
+  <div class="wrap">
+    <p class="kick mono rv">Applied AI</p>
+    <h2 class="rv" style="margin-top:1.6rem;--d:.06s">AI doesn't start with the agent. It starts with the <span class="rt">process.<i></i><i></i><i></i></span></h2>
+    <ol class="chain rv" aria-label="Process, automation, AI, scale"><li>Process</li><li class="sep" aria-hidden="true">→</li><li>Automation</li><li class="sep" aria-hidden="true">→</li><li class="on">AI</li><li class="sep" aria-hidden="true">→</li><li>Scale</li></ol>
+    <p class="ai-note rv lede">First we understand the journey. Then we find where there is repetition, lost efficiency or a need for speed. Only then do we decide where AI enters, what it does, and when it hands the conversation to a person. Applied AI, not AI for hype.</p>
+  </div>
+</section>
+
+<!-- 05 WHO -->
+<section class="paper" id="who" data-theme="paper">
+  <div class="wrap">
+    <p class="kick mono rv">05 · Who it's for</p>
+    <h2 class="h2 rv" style="margin-top:1.6rem;max-width:16ch;--d:.06s">Teams that already sell, but know they could <span class="rt">run better.<i></i><i></i><i></i></span></h2>
+    <div class="who-grid">
+      <ul class="who">
+        <li class="rv">Businesses that grew and whose processes didn't keep up</li>
+        <li class="rv">Sales operations that depend too much on specific people</li>
+        <li class="rv">Teams with a CRM but no trust in the data</li>
+        <li class="rv">Lots of leads, little clarity on conversion</li>
+        <li class="rv">Managers who can't see where revenue is lost</li>
+        <li class="rv">Operations that want AI without losing the human sales experience</li>
+        <li class="rv">Teams that want to grow without turning into chaos</li>
+      </ul>
+      <aside class="seg rv" style="--d:.1s">
+        <p class="kick mono">Segments</p>
+        <h3>We started with digital product creators. The method travels.</h3>
+        <ul><li>Digital products</li><li>Real estate</li><li>Consortium</li><li>Industry</li><li>Jewelry &amp; retail</li></ul>
+        <p>Wherever a sales operation already sells and needs structure, the same five services apply.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 06 DIAGNOSTIC -->
+<section class="dark" id="diagnostic" data-theme="dark">
+  <div class="wrap">
+    <p class="kick mono rv">06 · Quick diagnostic</p>
+    <h2 class="h2 rv" style="margin-top:1.6rem;max-width:15ch;--d:.06s">Is your operation running on <span class="rt">improvisation?<i></i><i></i><i></i></span></h2>
+    <p class="lede rv" style="margin-top:1.6rem">Tick everything that sounds familiar. It takes 20 seconds.</p>
+    <div class="dx-grid">
+      <ul class="dx" id="dx">
+        <li><label><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg></span><input type="checkbox"><span>Most leads aren't answered on time.</span></label></li>
+        <li><label><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg></span><input type="checkbox"><span>Nobody knows where leads get stuck.</span></label></li>
+        <li><label><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg></span><input type="checkbox"><span>Your team takes too long to respond.</span></label></li>
+        <li><label><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg></span><input type="checkbox"><span>Opportunities are lost for lack of follow-up.</span></label></li>
+        <li><label><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg></span><input type="checkbox"><span>You can't say which seller converts best, or why.</span></label></li>
+        <li><label><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg></span><input type="checkbox"><span>You can't tell which channels bring revenue and which only bring volume.</span></label></li>
+        <li><label><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg></span><input type="checkbox"><span>You don't know where AI should step in.</span></label></li>
+        <li><label><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg></span><input type="checkbox"><span>Money leaks somewhere between marketing and sales.</span></label></li>
+      </ul>
+      <aside class="score" aria-live="polite">
+        <p class="kick mono">Your result</p>
+        <div class="big"><span id="sc">0</span><small>/ 8</small></div>
+        <div class="bar"><i id="bar"></i></div>
+        <p class="msg" id="msg">Tick what sounds familiar.</p>
+        <a class="btn btn-lime" id="dxbtn" href="#" target="_blank" rel="noopener">Talk to us about it <span class="ar" aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 07 ABOUT -->
+<section class="paper" id="about" data-theme="paper">
+  <div class="wrap">
+    <p class="kick mono rv">07 · About</p>
+    <h2 class="h2 rv" style="margin-top:1.6rem;max-width:15ch;--d:.06s">Experience turned into <span class="rt">structure.<i></i><i></i><i></i></span></h2>
+    <div class="about">
+      <div>
+        <p class="lede rv">TÓDA comes from years living operations from the inside: sales, support, customer success, management, product, processes, CRM, automation and artificial intelligence.</p>
+        <p class="lede rv">That experience left one conviction: companies rarely suffer from a lack of tools. They suffer from a lack of connection between people, processes, data and technology. TÓDA was built to create that connection.</p>
+        <ul class="xp rv"><li>Sales</li><li>Support</li><li>Customer success</li><li>Management</li><li>Product</li><li>Processes</li><li>CRM</li><li>Automation</li><li>AI</li></ul>
+      </div>
+      <aside class="person rv" style="--d:.1s">
+        <img src="data:image/jpeg;base64,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" width="112" height="112" alt="Teodora Dutra, founder of TÓDA">
+        <div><div class="nm">Teodora Dutra</div><div class="rl mono">Founder, TÓDA</div></div>
+        <span class="bd"><i></i>Certified Clint partner</span>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="dark cta" id="contact" data-theme="dark">
+  <div class="wrap">
+    <h2 class="rv">Every operation needs <span class="lime">structure.</span></h2>
+    <p class="lede rv">If your business already sells, but the operation still depends on improvisation, specific people or scattered information, there is probably a lot to organize before the next level of growth.</p>
+    <a class="btn btn-lime wa rv" href="#" target="_blank" rel="noopener">Talk to TÓDA on WhatsApp <span class="ar" aria-hidden="true">→</span></a>
+    <p class="nt rv">No forms. You talk to us directly.</p>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var MSG = encodeURIComponent("Hi! I found TÓDA's website and I'd like to talk about structuring my sales operation.");
+  var WA = "https://wa.me/554896640747?text=" + MSG;
+  document.querySelectorAll(".wa").forEach(function(a){ a.setAttribute("href", WA); });
+
+  var hdr = document.getElementById("hdr");
+  function sc(){ hdr.classList.toggle("on", window.scrollY > 24); }
+  sc(); addEventListener("scroll", sc, {passive:true});
+
+  var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* reveal + route underline */
+  var rv = document.querySelectorAll(".rv, .steps");
+  if(reduced || !("IntersectionObserver" in window)){ rv.forEach(function(e){ e.classList.add("in"); }); document.querySelectorAll(".man-l li").forEach(function(l){ l.classList.add("lit"); }); }
+  else{
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.15, rootMargin:"0px 0px -6% 0px"});
+    rv.forEach(function(e){ io.observe(e); });
+    var lo = new IntersectionObserver(function(es){ es.forEach(function(e){ e.target.classList.toggle("lit", e.isIntersecting); }); }, {threshold:.6, rootMargin:"-20% 0px -20% 0px"});
+    document.querySelectorAll(".man-l li").forEach(function(l){ lo.observe(l); });
+  }
+  /* underline fires when its heading is revealed */
+  document.querySelectorAll(".rv").forEach(function(el){ if(el.querySelector(".rt")){ var o = new MutationObserver(function(){ if(el.classList.contains("in")){ el.querySelectorAll(".rt").forEach(function(r){ r.classList.add("in"); }); } }); o.observe(el,{attributes:true,attributeFilter:["class"]}); } });
+  if(reduced){ document.querySelectorAll(".rt").forEach(function(r){ r.classList.add("in"); }); }
+
+  /* rail: the page as a route */
+  var links = Array.prototype.slice.call(document.querySelectorAll("#rail a"));
+  var secs = links.map(function(a){ return document.getElementById(a.getAttribute("data-s")); });
+  var rail = document.getElementById("rail");
+  function setActive(){
+    var y = innerHeight * .4, cur = 0;
+    secs.forEach(function(s, i){ if(s && s.getBoundingClientRect().top <= y) cur = i; });
+    links.forEach(function(a, i){ a.classList.toggle("on", i === cur); });
+    var th = secs[cur] ? secs[cur].getAttribute("data-theme") : "dark";
+    rail.classList.toggle("onpaper", th === "paper");
+  }
+  setActive(); addEventListener("scroll", setActive, {passive:true});
+
+  /* diagnostic */
+  var boxes = document.querySelectorAll("#dx input"), scEl = document.getElementById("sc"), bar = document.getElementById("bar"), msg = document.getElementById("msg"), btn = document.getElementById("dxbtn");
+  var texts = ["Tick what sounds familiar.", "A leak or two. Worth a closer look.", "A leak or two. Worth a closer look.", "Your operation is leaking. Let's find where.", "Your operation is leaking. Let's find where.", "Your operation is leaking. Let's find where.", "Your operation is running on improvisation. Good news: it's fixable.", "Your operation is running on improvisation. Good news: it's fixable.", "Your operation is running on improvisation. Good news: it's fixable."];
+  function dx(){
+    var n = 0; boxes.forEach(function(b){ b.closest("li").classList.toggle("on", b.checked); if(b.checked) n++; });
+    scEl.textContent = n; bar.style.width = (n/8*100) + "%"; msg.textContent = texts[n];
+    var t = n ? "Hi! I ticked " + n + " of 8 on the TÓDA diagnostic and I'd like to talk about it." : "Hi! I found TÓDA's website and I'd like to talk about structuring my sales operation.";
+    btn.setAttribute("href", "https://wa.me/554896640747?text=" + encodeURIComponent(t));
+  }
+  boxes.forEach(function(b){ b.addEventListener("change", dx); }); dx();
+
+  /* hero flow: scattered points organize into a connected path */
+  var cv = document.getElementById("flow"); if(!cv) return;
+  var ctx = cv.getContext("2d"), hero = document.getElementById("top");
+  var W, H, dpr, pts = [], nodes = [], P = [], mouse = {x:-999,y:-999}, running = true, t0 = performance.now();
+  var NN_D = [[.40,.90],[.48,.80],[.56,.86],[.64,.70],[.72,.75],[.79,.58],[.86,.63],[.92,.45],[.965,.32]], NN_M = [[.05,.90],[.17,.80],[.29,.86],[.41,.72],[.53,.78],[.64,.62],[.76,.67],[.87,.52],[.94,.42]];
+  var LB = ["MARKETING","PROCESS","CRM","SELLER","AUTOMATION","AI","DATA","MANAGEMENT","TÓDA"];
+  function gauss(){ var u = 0, v = 0; while(!u) u = Math.random(); while(!v) v = Math.random(); return Math.sqrt(-2*Math.log(u)) * Math.cos(2*Math.PI*v); }
+  function build(){
+    var r = hero.getBoundingClientRect(); dpr = Math.min(devicePixelRatio || 1, 2);
+    W = r.width; H = r.height; cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    var small = W < 760;
+    nodes = (small ? NN_M : NN_D).map(function(n){ return {x:n[0]*W, y:(small ? (n[1]*.45 + .50) : n[1])*H}; });
+    pts = [];
+    for(var i = 0; i < nodes.length-1; i++){
+      var p0 = nodes[Math.max(i-1,0)], p1 = nodes[i], p2 = nodes[i+1], p3 = nodes[Math.min(i+2,nodes.length-1)];
+      for(var s = 0; s < 36; s++){
+        var u = s/36, u2 = u*u, u3 = u2*u;
+        var x = .5*((2*p1.x)+(-p0.x+p2.x)*u+(2*p0.x-5*p1.x+4*p2.x-p3.x)*u2+(-p0.x+3*p1.x-3*p2.x+p3.x)*u3);
+        var y = .5*((2*p1.y)+(-p0.y+p2.y)*u+(2*p0.y-5*p1.y+4*p2.y-p3.y)*u2+(-p0.y+3*p1.y-3*p2.y+p3.y)*u3);
+        pts.push({x:x,y:y});
+      }
+    }
+    pts.push({x:nodes[nodes.length-1].x, y:nodes[nodes.length-1].y});
+    for(var k = 0; k < pts.length; k++){ var a = pts[Math.max(k-1,0)], b = pts[Math.min(k+1,pts.length-1)], tx = b.x-a.x, ty = b.y-a.y, l = Math.hypot(tx,ty)||1; pts[k].nx = -ty/l; pts[k].ny = tx/l; }
+    var count = small ? 520 : 1250; P = [];
+    for(var q = 0; q < count; q++) P.push({t:Math.random(), v:.018+Math.random()*.045, z:gauss(), s:.7+Math.random()*1.5, ph:Math.random()*6.28});
+  }
+  function at(t){ t = t < 0 ? 0 : (t > 1 ? 1 : t); var i = t*(pts.length-1), i0 = Math.floor(i), f = i-i0, a = pts[i0], b = pts[Math.min(i0+1,pts.length-1)]; return {x:a.x+(b.x-a.x)*f, y:a.y+(b.y-a.y)*f, nx:a.nx+(b.nx-a.nx)*f, ny:a.ny+(b.ny-a.ny)*f}; }
+  var last = performance.now();
+  function frame(now){
+    var dt = Math.max(0, Math.min((now-last)/1000, .05)); last = now; var tm = (now-t0)/1000;
+    ctx.clearRect(0,0,W,H);
+    var sm = W < 760, spread = H * (sm ? .16 : .24);
+    /* path */
+    ctx.beginPath(); ctx.moveTo(pts[0].x, pts[0].y); for(var i = 1; i < pts.length; i++) ctx.lineTo(pts[i].x, pts[i].y);
+    ctx.strokeStyle = "rgba(195,245,60,.16)"; ctx.lineWidth = 1; ctx.stroke();
+    /* particles */
+    for(var j = 0; j < P.length; j++){
+      var p = P[j]; p.t += p.v*dt; if(p.t > 1){ p.t = 0; p.z = gauss(); }
+      var c = at(p.t), e = Math.pow(1-p.t, 1.7), off = p.z * (spread*e + .6) + Math.sin(tm*.9+p.ph) * 7 * e;
+      var x = c.x + c.nx*off, y = c.y + c.ny*off;
+      var dx = x-mouse.x, dy = y-mouse.y, d2 = dx*dx+dy*dy;
+      if(d2 < 14400){ var f = (1-d2/14400)*26, d = Math.sqrt(d2)||1; x += dx/d*f; y += dy/d*f; }
+      var a = .22 + .78*Math.pow(p.t, 1.4);
+      var r = 150 + (195-150)*p.t, g = 165 + (245-165)*p.t, b = 150 + (60-150)*p.t;
+      ctx.fillStyle = "rgba(" + (r|0) + "," + (g|0) + "," + (b|0) + "," + a.toFixed(2) + ")";
+      ctx.fillRect(x, y, p.s, p.s);
+    }
+    /* nodes + labels + pulse */
+    var pulse = (tm*.11) % 1.15;
+    for(var n = 0; n < nodes.length; n++){
+      var nd = nodes[n], on = Math.abs(pulse - n/(nodes.length-1)) < .07, last_ = n === nodes.length-1;
+      if(last_){ var gr = ctx.createRadialGradient(nd.x,nd.y,0,nd.x,nd.y,sm?46:84); gr.addColorStop(0,"rgba(195,245,60,.5)"); gr.addColorStop(1,"rgba(195,245,60,0)"); ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(nd.x,nd.y,sm?46:84,0,6.283); ctx.fill(); }
+      ctx.beginPath(); ctx.arc(nd.x, nd.y, last_ ? 7 : (on ? 6 : 4), 0, 6.283);
+      if(last_ || on){ ctx.fillStyle = "#C3F53C"; ctx.fill(); } else { ctx.fillStyle = "#06110B"; ctx.fill(); ctx.strokeStyle = "rgba(195,245,60,.8)"; ctx.lineWidth = 1.5; ctx.stroke(); }
+      if(!sm){ ctx.font = "500 10px 'JetBrains Mono',monospace"; ctx.textAlign = "center"; ctx.fillStyle = on || last_ ? "rgba(195,245,60,.95)" : "rgba(244,247,239,.42)"; ctx.fillText(LB[n], nd.x, nd.y - 16); }
+    }
+    if(running && !reduced) requestAnimationFrame(frame);
+  }
+  build(); last = performance.now(); frame(last);
+  addEventListener("resize", function(){ build(); if(reduced) frame(performance.now()); });
+  hero.addEventListener("mousemove", function(e){ var r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  hero.addEventListener("mouseleave", function(){ mouse.x = mouse.y = -999; });
+  if("IntersectionObserver" in window && !reduced){ new IntersectionObserver(function(es){ var vis = es[0].isIntersecting; if(vis && !running){ running = true; last = performance.now(); requestAnimationFrame(frame); } else if(!vis){ running = false; } }, {threshold:0}).observe(hero); }
+})();
+</script>
+</body>
+</html>

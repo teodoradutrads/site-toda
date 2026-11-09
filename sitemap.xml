@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://todaeco.com/</loc><lastmod>2026-10-18</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://todaeco.com/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://todaeco.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://todaeco.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://todaeco.com/"/>
+  </url>
+  <url>
+    <loc>https://todaeco.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://todaeco.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://todaeco.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://todaeco.com/"/>
+  </url>
   <url><loc>https://todaeco.com/educacao/</loc><lastmod>2026-10-18</lastmod></url>
   <url><loc>https://todaeco.com/educacao/whatsapp-oficial/</loc><lastmod>2026-10-18</lastmod></url>
   <url><loc>https://todaeco.com/educacao/marketing-x-vendas/</loc><lastmod>2026-10-18</lastmod></url>
